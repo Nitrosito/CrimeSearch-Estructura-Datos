@@ -1,21 +1,15 @@
 /*
- * meteorito.h
+ * crimen.h
  *
- * Copyright  (C) Juan F. Huete
+ *
 */
 #ifndef __CRIMEN_H
 #define __CRIMEN_H
-
-
 #include <iostream>
-
 #include "fecha.h"
 //! Clase crimen, asociada a la definición de un crimen
 /*! crimen::crimen,  .....
  * Descripción contiene toda la información asociada a un crimen.
-
- @todo Implementa esta clase, junto con su documentación asociada
-
 */
 
 
