@@ -1,0 +1,328 @@
+\hypertarget{classCSS}{}\section{C\+S\+S Class Reference}
+\label{classCSS}\index{C\+S\+S@{C\+S\+S}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCSS_1_1Date__iterator}{Date\+\_\+iterator}
+\item 
+class \hyperlink{classCSS_1_1iterator}{iterator}
+\item 
+class \hyperlink{classCSS_1_1IUCR__iterator}{I\+U\+C\+R\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCSS_a64c9a57b619f9d14b0a1c7f483a3f1cc}{load} (String nombre\+D\+B)
+\begin{DoxyCompactList}\small\item\em Lee los elementos dado un fichero e inserta la informacion en la B\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classCSS_aa91d167f48777dee663cc04ecdfbbf94}{insert} (const \hyperlink{classcrimen}{crimen} \&x)
+\begin{DoxyCompactList}\small\item\em Inserta un nuevo crimen en la base de datos. \end{DoxyCompactList}\item 
+bool \hyperlink{classCSS_a2c783f8e37c103cf317c2fd11864a796}{erase} (unsigned int I\+D)
+\begin{DoxyCompactList}\small\item\em Borra un crimen de la base de datos dado su I\+D, y todas sus referencias. \end{DoxyCompactList}\item 
+\hyperlink{classCSS_1_1iterator}{iterator} \hyperlink{classCSS_a6c33bc18a1eee7db2c6557ca8a06f292}{find\+\_\+\+I\+D} (const unsigned int I\+D)
+\begin{DoxyCompactList}\small\item\em Busca el crimen identificado por I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classCSS_ae63486750a33cba9bb04d07a308bfbbb}{set\+Arrest} (const unsigned int I\+D, bool value)
+\begin{DoxyCompactList}\small\item\em Modifica el campo arrest de un crimen. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ I\+D, float $>$ $>$ \hyperlink{classCSS_a722ce77260c4f3f3b324a218c31a65c1}{Query} (list$<$ string $>$ \&q, int k)
+\begin{DoxyCompactList}\small\item\em Dada una consulta, expresada mediante un conjunto de términos en q, el sistema devuelve un vector ordenado con los k mejores I\+D. \end{DoxyCompactList}\item 
+list$<$ I\+D $>$ \hyperlink{classCSS_a8a38d465d1886a86d22b6fc365fd8345}{in\+Area} (Longitud x1, Latitud y1, Longitud x2, Latitud y2)
+\begin{DoxyCompactList}\small\item\em Busca delitos que se han cometido dentro de un area geometrica concreta. \end{DoxyCompactList}\item 
+\hyperlink{classCSS_1_1IUCR__iterator}{I\+U\+C\+R\+\_\+iterator} \hyperlink{classCSS_adb1e966261184762b82cd74ea184cb04}{ibegin} ()
+\item 
+\hyperlink{classCSS_1_1Date__iterator}{Date\+\_\+iterator} \hyperlink{classCSS_a800a8614ae299a41344c211b43efa943}{dbegin} ()
+\item 
+\hyperlink{classCSS_1_1iterator}{iterator} \hyperlink{classCSS_acd70d4445614dba24d9a5363f91099ad}{begin} ()
+\item 
+\hyperlink{classCSS_1_1Date__iterator}{Date\+\_\+iterator} \hyperlink{classCSS_a4c49f628d97d7a94268103228b3f33c1}{dend} ()
+\item 
+\hyperlink{classCSS_1_1IUCR__iterator}{I\+U\+C\+R\+\_\+iterator} \hyperlink{classCSS_a3c53e356a8571df813ce80f90478023a}{iend} ()
+\item 
+\hyperlink{classCSS_1_1iterator}{iterator} \hyperlink{classCSS_a1068ab0d435e4cf0ad494df8102240b8}{end} ()
+\item 
+\hyperlink{classCSS_1_1IUCR__iterator}{I\+U\+C\+R\+\_\+iterator} \hyperlink{classCSS_a5f79c3fd84197d0a0f865bff08a049a6}{lower\+\_\+bound} (I\+U\+C\+R i)
+\begin{DoxyCompactList}\small\item\em Hacer busqueda por rango, considerando I\+U\+C\+R. \end{DoxyCompactList}\item 
+\hyperlink{classCSS_1_1IUCR__iterator}{I\+U\+C\+R\+\_\+iterator} \hyperlink{classCSS_a5005ab25a8151e21aaeaa066f63394c0}{upper\+\_\+bound} (I\+U\+C\+R d)
+\begin{DoxyCompactList}\small\item\em Hacer busqueda por rango, considerando I\+U\+C\+R. \end{DoxyCompactList}\item 
+\hyperlink{classCSS_1_1Date__iterator}{Date\+\_\+iterator} \hyperlink{classCSS_a9d22cb90961cb7b74946ec256328f469}{lower\+\_\+bound} (Fecha i)
+\begin{DoxyCompactList}\small\item\em Hacer busqueda por rango. \end{DoxyCompactList}\item 
+\hyperlink{classCSS_1_1Date__iterator}{Date\+\_\+iterator} \hyperlink{classCSS_a45e406f1706277a2c39d54e5a5f77f48}{upper\+\_\+bound} (Fecha d)
+\begin{DoxyCompactList}\small\item\em Hacer busqueda por rango. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCSS_acd70d4445614dba24d9a5363f91099ad}{}\index{C\+S\+S@{C\+S\+S}!begin@{begin}}
+\index{begin@{begin}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} C\+S\+S\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCSS_acd70d4445614dba24d9a5363f91099ad}
+\begin{DoxyReturn}{Returns}
+Iterador correspondiente al primer delito que se encuentra 
+\end{DoxyReturn}
+\hypertarget{classCSS_a800a8614ae299a41344c211b43efa943}{}\index{C\+S\+S@{C\+S\+S}!dbegin@{dbegin}}
+\index{dbegin@{dbegin}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{dbegin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date\+\_\+iterator} C\+S\+S\+::dbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCSS_a800a8614ae299a41344c211b43efa943}
+\begin{DoxyReturn}{Returns}
+Iterador correspondiente al primer delito que se encuentra 
+\end{DoxyReturn}
+\hypertarget{classCSS_a4c49f628d97d7a94268103228b3f33c1}{}\index{C\+S\+S@{C\+S\+S}!dend@{dend}}
+\index{dend@{dend}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{dend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date\+\_\+iterator} C\+S\+S\+::dend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCSS_a4c49f628d97d7a94268103228b3f33c1}
+\begin{DoxyReturn}{Returns}
+Iterador que apunta al elemento siguiente al ultimo delito en \hyperlink{classCSS}{C\+S\+S} segun el criterio sobre el que se itera 
+\end{DoxyReturn}
+\hypertarget{classCSS_a1068ab0d435e4cf0ad494df8102240b8}{}\index{C\+S\+S@{C\+S\+S}!end@{end}}
+\index{end@{end}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} C\+S\+S\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCSS_a1068ab0d435e4cf0ad494df8102240b8}
+\begin{DoxyReturn}{Returns}
+Iterador que apunta al elemento siguiente al ultimo delito en \hyperlink{classCSS}{C\+S\+S} segun el criterio sobre el que se itera 
+\end{DoxyReturn}
+\hypertarget{classCSS_a2c783f8e37c103cf317c2fd11864a796}{}\index{C\+S\+S@{C\+S\+S}!erase@{erase}}
+\index{erase@{erase}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+S\+S\+::erase (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{I\+D}
+\end{DoxyParamCaption}
+)}\label{classCSS_a2c783f8e37c103cf317c2fd11864a796}
+
+
+Borra un crimen de la base de datos dado su I\+D, y todas sus referencias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+D} & del crimen a borrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si lo ha borrado, false si no 
+\end{DoxyReturn}
+\hypertarget{classCSS_a6c33bc18a1eee7db2c6557ca8a06f292}{}\index{C\+S\+S@{C\+S\+S}!find\+\_\+\+I\+D@{find\+\_\+\+I\+D}}
+\index{find\+\_\+\+I\+D@{find\+\_\+\+I\+D}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{find\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} C\+S\+S\+::find\+\_\+\+I\+D (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{I\+D}
+\end{DoxyParamCaption}
+)}\label{classCSS_a6c33bc18a1eee7db2c6557ca8a06f292}
+
+
+Busca el crimen identificado por I\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+D} & del crimen a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+iterator a crimen encontrado. Si no encuentra devuelbe \hyperlink{classCSS_a1068ab0d435e4cf0ad494df8102240b8}{end()} 
+\end{DoxyReturn}
+\hypertarget{classCSS_adb1e966261184762b82cd74ea184cb04}{}\index{C\+S\+S@{C\+S\+S}!ibegin@{ibegin}}
+\index{ibegin@{ibegin}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{ibegin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+U\+C\+R\+\_\+iterator} C\+S\+S\+::ibegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCSS_adb1e966261184762b82cd74ea184cb04}
+\begin{DoxyReturn}{Returns}
+Iterador correspondiente al primer delito que se encuentra 
+\end{DoxyReturn}
+\hypertarget{classCSS_a3c53e356a8571df813ce80f90478023a}{}\index{C\+S\+S@{C\+S\+S}!iend@{iend}}
+\index{iend@{iend}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{iend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+U\+C\+R\+\_\+iterator} C\+S\+S\+::iend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCSS_a3c53e356a8571df813ce80f90478023a}
+\begin{DoxyReturn}{Returns}
+Iterador que apunta al elemento siguiente al ultimo delito en \hyperlink{classCSS}{C\+S\+S} segun el criterio sobre el que se itera 
+\end{DoxyReturn}
+\hypertarget{classCSS_a8a38d465d1886a86d22b6fc365fd8345}{}\index{C\+S\+S@{C\+S\+S}!in\+Area@{in\+Area}}
+\index{in\+Area@{in\+Area}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{in\+Area}]{\setlength{\rightskip}{0pt plus 5cm}list$<$I\+D$>$ C\+S\+S\+::in\+Area (
+\begin{DoxyParamCaption}
+\item[{Longitud}]{x1, }
+\item[{Latitud}]{y1, }
+\item[{Longitud}]{x2, }
+\item[{Latitud}]{y2}
+\end{DoxyParamCaption}
+)}\label{classCSS_a8a38d465d1886a86d22b6fc365fd8345}
+
+
+Busca delitos que se han cometido dentro de un area geometrica concreta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1,y1,x2,y2} & longitud y latitud para localizar el area \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de crimenes cometidos en esa area 
+\end{DoxyReturn}
+\hypertarget{classCSS_aa91d167f48777dee663cc04ecdfbbf94}{}\index{C\+S\+S@{C\+S\+S}!insert@{insert}}
+\index{insert@{insert}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void C\+S\+S\+::insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf crimen} \&}]{x}
+\end{DoxyParamCaption}
+)}\label{classCSS_aa91d167f48777dee663cc04ecdfbbf94}
+
+
+Inserta un nuevo crimen en la base de datos. 
+
+\begin{DoxyPrecond}{Precondition}
+El crimen no debe estar almacenado en el conjunto 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Crimen a insertar \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCSS_a64c9a57b619f9d14b0a1c7f483a3f1cc}{}\index{C\+S\+S@{C\+S\+S}!load@{load}}
+\index{load@{load}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void C\+S\+S\+::load (
+\begin{DoxyParamCaption}
+\item[{String}]{nombre\+D\+B}
+\end{DoxyParamCaption}
+)}\label{classCSS_a64c9a57b619f9d14b0a1c7f483a3f1cc}
+
+
+Lee los elementos dado un fichero e inserta la informacion en la B\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+D\+B} & nombre del fichero \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCSS_a5f79c3fd84197d0a0f865bff08a049a6}{}\index{C\+S\+S@{C\+S\+S}!lower\+\_\+bound@{lower\+\_\+bound}}
+\index{lower\+\_\+bound@{lower\+\_\+bound}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{lower\+\_\+bound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+U\+C\+R\+\_\+iterator} C\+S\+S\+::lower\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{I\+U\+C\+R}]{i}
+\end{DoxyParamCaption}
+)}\label{classCSS_a5f79c3fd84197d0a0f865bff08a049a6}
+
+
+Hacer busqueda por rango, considerando I\+U\+C\+R. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+U\+C\+R} & de delitos a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+iterador que apunta al primer delito con I\+U\+C\+R mayor o igual a i 
+\end{DoxyReturn}
+\hypertarget{classCSS_a9d22cb90961cb7b74946ec256328f469}{}\index{C\+S\+S@{C\+S\+S}!lower\+\_\+bound@{lower\+\_\+bound}}
+\index{lower\+\_\+bound@{lower\+\_\+bound}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{lower\+\_\+bound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date\+\_\+iterator} C\+S\+S\+::lower\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{Fecha}]{i}
+\end{DoxyParamCaption}
+)}\label{classCSS_a9d22cb90961cb7b74946ec256328f469}
+
+
+Hacer busqueda por rango. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & fecha de delitos a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+iterador que apunta al primer delito con Fecha mayor o igual a i 
+\end{DoxyReturn}
+\hypertarget{classCSS_a722ce77260c4f3f3b324a218c31a65c1}{}\index{C\+S\+S@{C\+S\+S}!Query@{Query}}
+\index{Query@{Query}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{Query}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$pair$<$I\+D,float$>$ $>$ C\+S\+S\+::\+Query (
+\begin{DoxyParamCaption}
+\item[{list$<$ string $>$ \&}]{q, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\label{classCSS_a722ce77260c4f3f3b324a218c31a65c1}
+
+
+Dada una consulta, expresada mediante un conjunto de términos en q, el sistema devuelve un vector ordenado con los k mejores I\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & conjunto de terminos \\
+\hline
+{\em k} & cantidad de I\+Ds a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector ordenado con los k mejores I\+D 
+\end{DoxyReturn}
+\hypertarget{classCSS_ae63486750a33cba9bb04d07a308bfbbb}{}\index{C\+S\+S@{C\+S\+S}!set\+Arrest@{set\+Arrest}}
+\index{set\+Arrest@{set\+Arrest}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{set\+Arrest}]{\setlength{\rightskip}{0pt plus 5cm}void C\+S\+S\+::set\+Arrest (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{I\+D, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{classCSS_ae63486750a33cba9bb04d07a308bfbbb}
+
+
+Modifica el campo arrest de un crimen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+D} & crimen a modificar \\
+\hline
+{\em value} & valor nuevo para arrest \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCSS_a5005ab25a8151e21aaeaa066f63394c0}{}\index{C\+S\+S@{C\+S\+S}!upper\+\_\+bound@{upper\+\_\+bound}}
+\index{upper\+\_\+bound@{upper\+\_\+bound}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{upper\+\_\+bound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+U\+C\+R\+\_\+iterator} C\+S\+S\+::upper\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{I\+U\+C\+R}]{d}
+\end{DoxyParamCaption}
+)}\label{classCSS_a5005ab25a8151e21aaeaa066f63394c0}
+
+
+Hacer busqueda por rango, considerando I\+U\+C\+R. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\+U\+C\+R} & de delitos a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+iterador que apunta al ultimo delito con I\+U\+C\+R estrictamente mayor que d 
+\end{DoxyReturn}
+\hypertarget{classCSS_a45e406f1706277a2c39d54e5a5f77f48}{}\index{C\+S\+S@{C\+S\+S}!upper\+\_\+bound@{upper\+\_\+bound}}
+\index{upper\+\_\+bound@{upper\+\_\+bound}!C\+S\+S@{C\+S\+S}}
+\subsubsection[{upper\+\_\+bound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date\+\_\+iterator} C\+S\+S\+::upper\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{Fecha}]{d}
+\end{DoxyParamCaption}
+)}\label{classCSS_a45e406f1706277a2c39d54e5a5f77f48}
+
+
+Hacer busqueda por rango. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & fecha de delitos a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+iterador que apunta al ultimo delito con fecha estrictamente mayor que d 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+css.\+h\end{DoxyCompactItemize}

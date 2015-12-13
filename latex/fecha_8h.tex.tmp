@@ -1,0 +1,47 @@
+\hypertarget{fecha_8h}{}\section{fecha.\+h File Reference}
+\label{fecha_8h}\index{fecha.\+h@{fecha.\+h}}
+
+
+Fichero cabecera para fecha.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}fecha.\+hxx\char`\"{}}\\*
+Include dependency graph for fecha.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classfecha}{fecha}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{fecha_8h_a9787de38b43ae62ba2c0812f3dd18394}{operator$<$$<$} (ostream \&os, const \hyperlink{classfecha}{fecha} \&f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichero cabecera para fecha. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{fecha_8h_a9787de38b43ae62ba2c0812f3dd18394}{}\index{fecha.\+h@{fecha.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!fecha.\+h@{fecha.\+h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+)}\label{fecha_8h_a9787de38b43ae62ba2c0812f3dd18394}
+
+\begin{DoxyParams}{Parameters}
+{\em ostream} & \&os \\
+\hline
+{\em fecha} & \&f \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,298 @@
+\hypertarget{classcrimen}{}\section{crimen Class Reference}
+\label{classcrimen}\index{crimen@{crimen}}
+
+
+Clase crimen, asociada a la definición de un crimen.  
+
+
+
+
+{\ttfamily \#include $<$crimen.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcrimen_ab1147e36869c7e635699e4ef746a7555}{}\hyperlink{classcrimen_ab1147e36869c7e635699e4ef746a7555}{crimen} ()\label{classcrimen_ab1147e36869c7e635699e4ef746a7555}
+
+\begin{DoxyCompactList}\small\item\em Constructor sin parametros. \end{DoxyCompactList}\item 
+\hyperlink{classcrimen_a50b783e821c2f5bc829eceb9048c12d7}{crimen} (const \hyperlink{classcrimen}{crimen} \&x)
+\begin{DoxyCompactList}\small\item\em Construtor a partir dae un objeto crimen. \end{DoxyCompactList}\item 
+void \hyperlink{classcrimen_a2675734f5049f41b5fb5dbc4778df7f8}{set\+I\+D} (long int \&id)
+\begin{DoxyCompactList}\small\item\em Asigna un I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classcrimen_a98ee8c42a0ec09c704c5f17e812a6bd5}{set\+Case\+Number} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Asigna un numero de caso. \end{DoxyCompactList}\item 
+void \hyperlink{classcrimen_ac308c139bb8b599a7badbecd91bfbc5a}{set\+Date} (const \hyperlink{classfecha}{fecha} \&d)
+\begin{DoxyCompactList}\small\item\em Asigna una fecha. \end{DoxyCompactList}\item 
+void \hyperlink{classcrimen_a9903f49178ad0001f39c03d018b05a2a}{set\+Iucr} (const string \&s)
+\begin{DoxyCompactList}\small\item\em Asigna un código del tipo de delito según Illinois Uniform Crime Reporting, I\+U\+C\+R. \end{DoxyCompactList}\item 
+\hypertarget{classcrimen_a959223f59be38a0cdb28ea29f294f1d3}{}void {\bfseries set\+Primary\+Type} (const string \&s)\label{classcrimen_a959223f59be38a0cdb28ea29f294f1d3}
+
+\item 
+\hypertarget{classcrimen_a49fdeeb1b6376fd78bce80e42f670d43}{}void {\bfseries set\+Description} (const string \&s)\label{classcrimen_a49fdeeb1b6376fd78bce80e42f670d43}
+
+\item 
+\hypertarget{classcrimen_ad3bd97ed5867e3961a77f64a15797e41}{}void {\bfseries set\+Location\+Description} (const string \&s)\label{classcrimen_ad3bd97ed5867e3961a77f64a15797e41}
+
+\item 
+void \hyperlink{classcrimen_ae08b85470038469179a01ba753b7641a}{set\+Arrest} (bool a)
+\begin{DoxyCompactList}\small\item\em Asigna si esta arrestado // \#fixme. \end{DoxyCompactList}\item 
+void \hyperlink{classcrimen_a3ec14cf4bb0464350d8efd98d2679d41}{set\+Domestic} (bool d)
+\begin{DoxyCompactList}\small\item\em Asigna si es domestico. \end{DoxyCompactList}\item 
+\hypertarget{classcrimen_a10b0917bbef15352657a1ccdbee1a738}{}void {\bfseries set\+Latitude} (double \&lat)\label{classcrimen_a10b0917bbef15352657a1ccdbee1a738}
+
+\item 
+\hypertarget{classcrimen_a8db952f20e2fb3ab6a9124f0a6dcf0a4}{}void {\bfseries set\+Longitude} (double \&lon)\label{classcrimen_a8db952f20e2fb3ab6a9124f0a6dcf0a4}
+
+\item 
+void \hyperlink{classcrimen_a24c7850a61d6435929450b7b10964f07}{set\+Crimen} (string \&cadena)
+\begin{DoxyCompactList}\small\item\em Convierte una cadena en un crimen. \end{DoxyCompactList}\item 
+long int \hyperlink{classcrimen_a855eab30a304a6498828cb5d85a4e0e3}{get\+I\+D} () const 
+\begin{DoxyCompactList}\small\item\em Obtiene el I\+D de un caso. \end{DoxyCompactList}\item 
+string \hyperlink{classcrimen_ab3c025eb20cdcea9192ee190fa2af015}{get\+Case\+Number} () const 
+\begin{DoxyCompactList}\small\item\em Obtiene el numero de Caso. \end{DoxyCompactList}\item 
+\hyperlink{classfecha}{fecha} \hyperlink{classcrimen_a8a6712e536211034819441ab87e1c215}{get\+Date} () const 
+\begin{DoxyCompactList}\small\item\em Obtiene la fecha. \end{DoxyCompactList}\item 
+\hypertarget{classcrimen_a6d2bac20ef41f8c9944ca7deb8cc2ed5}{}string {\bfseries get\+Iucr} () const \label{classcrimen_a6d2bac20ef41f8c9944ca7deb8cc2ed5}
+
+\item 
+\hypertarget{classcrimen_ae47e93acec39b388cde221a679bccf9c}{}string {\bfseries get\+Primary\+Type} () const \label{classcrimen_ae47e93acec39b388cde221a679bccf9c}
+
+\item 
+\hypertarget{classcrimen_a61789d65209d167149df197272d8feba}{}string {\bfseries get\+Description} () const \label{classcrimen_a61789d65209d167149df197272d8feba}
+
+\item 
+\hypertarget{classcrimen_a9de655b3eea3592f6e5d017e83fd6060}{}string {\bfseries get\+Location\+Description} () const \label{classcrimen_a9de655b3eea3592f6e5d017e83fd6060}
+
+\item 
+\hypertarget{classcrimen_a6cab67bfdad566ce444236fc7c8df312}{}bool {\bfseries get\+Arrest} () const \label{classcrimen_a6cab67bfdad566ce444236fc7c8df312}
+
+\item 
+\hypertarget{classcrimen_a1849e7a82111773a6919318b9cf1d05d}{}bool {\bfseries get\+Domestic} () const \label{classcrimen_a1849e7a82111773a6919318b9cf1d05d}
+
+\item 
+\hypertarget{classcrimen_adfd62cd48c7d1d0259c007d3f6c39d58}{}double {\bfseries get\+Latitude} () const \label{classcrimen_adfd62cd48c7d1d0259c007d3f6c39d58}
+
+\item 
+\hypertarget{classcrimen_a0c24726cd34dc975b3fc7c664287a15c}{}double {\bfseries get\+Longitude} () const \label{classcrimen_a0c24726cd34dc975b3fc7c664287a15c}
+
+\item 
+\hyperlink{classcrimen}{crimen} \& \hyperlink{classcrimen_a612c4d3beaabd588703e4a580caf04e5}{operator=} (const \hyperlink{classcrimen}{crimen} \&c)
+\begin{DoxyCompactList}\small\item\em Operador de asignacion. \end{DoxyCompactList}\item 
+\hypertarget{classcrimen_aeced9ce4b7486123412975b8884d1ab7}{}bool {\bfseries operator==} (const \hyperlink{classcrimen}{crimen} \&x) const \label{classcrimen_aeced9ce4b7486123412975b8884d1ab7}
+
+\item 
+\hypertarget{classcrimen_ac865fdb9712f2426d947b1b5546b50e5}{}bool {\bfseries operator$<$} (const \hyperlink{classcrimen}{crimen} \&x) const \label{classcrimen_ac865fdb9712f2426d947b1b5546b50e5}
+
+\item 
+\hypertarget{classcrimen_ad0e1ff280d7899e9c7191b4bfc799e9d}{}bool {\bfseries operator$>$} (const \hyperlink{classcrimen}{crimen} \&x) const \label{classcrimen_ad0e1ff280d7899e9c7191b4bfc799e9d}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcrimen_a70d7dbf132d06cb3c889042765a7da2e}{}ostream \& {\bfseries operator$<$$<$} (ostream \&, const \hyperlink{classcrimen}{crimen} \&)\label{classcrimen_a70d7dbf132d06cb3c889042765a7da2e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase crimen, asociada a la definición de un crimen. 
+
+\hyperlink{classcrimen_ab1147e36869c7e635699e4ef746a7555}{crimen\+::crimen}, ..... Descripción contiene toda la información asociada a un crimen. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcrimen_a50b783e821c2f5bc829eceb9048c12d7}{}\index{crimen@{crimen}!crimen@{crimen}}
+\index{crimen@{crimen}!crimen@{crimen}}
+\subsubsection[{crimen}]{\setlength{\rightskip}{0pt plus 5cm}crimen\+::crimen (
+\begin{DoxyParamCaption}
+\item[{const {\bf crimen} \&}]{x}
+\end{DoxyParamCaption}
+)}\label{classcrimen_a50b783e821c2f5bc829eceb9048c12d7}
+
+
+Construtor a partir dae un objeto crimen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em crimen} & Objeto el cual que copiara \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcrimen_ab3c025eb20cdcea9192ee190fa2af015}{}\index{crimen@{crimen}!get\+Case\+Number@{get\+Case\+Number}}
+\index{get\+Case\+Number@{get\+Case\+Number}!crimen@{crimen}}
+\subsubsection[{get\+Case\+Number}]{\setlength{\rightskip}{0pt plus 5cm}string crimen\+::get\+Case\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classcrimen_ab3c025eb20cdcea9192ee190fa2af015}
+
+
+Obtiene el numero de Caso. 
+
+\begin{DoxyReturn}{Returns}
+Numero de caso 
+\end{DoxyReturn}
+\hypertarget{classcrimen_a8a6712e536211034819441ab87e1c215}{}\index{crimen@{crimen}!get\+Date@{get\+Date}}
+\index{get\+Date@{get\+Date}!crimen@{crimen}}
+\subsubsection[{get\+Date}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fecha} crimen\+::get\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classcrimen_a8a6712e536211034819441ab87e1c215}
+
+
+Obtiene la fecha. 
+
+\begin{DoxyReturn}{Returns}
+Fecha 
+\end{DoxyReturn}
+\hypertarget{classcrimen_a855eab30a304a6498828cb5d85a4e0e3}{}\index{crimen@{crimen}!get\+I\+D@{get\+I\+D}}
+\index{get\+I\+D@{get\+I\+D}!crimen@{crimen}}
+\subsubsection[{get\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}long int crimen\+::get\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classcrimen_a855eab30a304a6498828cb5d85a4e0e3}
+
+
+Obtiene el I\+D de un caso. 
+
+\begin{DoxyReturn}{Returns}
+I\+D del caso 
+\end{DoxyReturn}
+\hypertarget{classcrimen_a612c4d3beaabd588703e4a580caf04e5}{}\index{crimen@{crimen}!operator=@{operator=}}
+\index{operator=@{operator=}!crimen@{crimen}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf crimen} \& crimen\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf crimen} \&}]{c}
+\end{DoxyParamCaption}
+)}\label{classcrimen_a612c4d3beaabd588703e4a580caf04e5}
+
+
+Operador de asignacion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcrimen_ae08b85470038469179a01ba753b7641a}{}\index{crimen@{crimen}!set\+Arrest@{set\+Arrest}}
+\index{set\+Arrest@{set\+Arrest}!crimen@{crimen}}
+\subsubsection[{set\+Arrest}]{\setlength{\rightskip}{0pt plus 5cm}void crimen\+::set\+Arrest (
+\begin{DoxyParamCaption}
+\item[{bool}]{a}
+\end{DoxyParamCaption}
+)}\label{classcrimen_ae08b85470038469179a01ba753b7641a}
+
+
+Asigna si esta arrestado // \#fixme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Valor a asignar \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcrimen_a98ee8c42a0ec09c704c5f17e812a6bd5}{}\index{crimen@{crimen}!set\+Case\+Number@{set\+Case\+Number}}
+\index{set\+Case\+Number@{set\+Case\+Number}!crimen@{crimen}}
+\subsubsection[{set\+Case\+Number}]{\setlength{\rightskip}{0pt plus 5cm}void crimen\+::set\+Case\+Number (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classcrimen_a98ee8c42a0ec09c704c5f17e812a6bd5}
+
+
+Asigna un numero de caso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Numero de caso a asignar \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcrimen_a24c7850a61d6435929450b7b10964f07}{}\index{crimen@{crimen}!set\+Crimen@{set\+Crimen}}
+\index{set\+Crimen@{set\+Crimen}!crimen@{crimen}}
+\subsubsection[{set\+Crimen}]{\setlength{\rightskip}{0pt plus 5cm}void crimen\+::set\+Crimen (
+\begin{DoxyParamCaption}
+\item[{string \&}]{cadena}
+\end{DoxyParamCaption}
+)}\label{classcrimen_a24c7850a61d6435929450b7b10964f07}
+
+
+Convierte una cadena en un crimen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cadena} & Cadena a convertir \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcrimen_ac308c139bb8b599a7badbecd91bfbc5a}{}\index{crimen@{crimen}!set\+Date@{set\+Date}}
+\index{set\+Date@{set\+Date}!crimen@{crimen}}
+\subsubsection[{set\+Date}]{\setlength{\rightskip}{0pt plus 5cm}void crimen\+::set\+Date (
+\begin{DoxyParamCaption}
+\item[{const {\bf fecha} \&}]{d}
+\end{DoxyParamCaption}
+)}\label{classcrimen_ac308c139bb8b599a7badbecd91bfbc5a}
+
+
+Asigna una fecha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Fecha a asignar \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcrimen_a3ec14cf4bb0464350d8efd98d2679d41}{}\index{crimen@{crimen}!set\+Domestic@{set\+Domestic}}
+\index{set\+Domestic@{set\+Domestic}!crimen@{crimen}}
+\subsubsection[{set\+Domestic}]{\setlength{\rightskip}{0pt plus 5cm}void crimen\+::set\+Domestic (
+\begin{DoxyParamCaption}
+\item[{bool}]{d}
+\end{DoxyParamCaption}
+)}\label{classcrimen_a3ec14cf4bb0464350d8efd98d2679d41}
+
+
+Asigna si es domestico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Valor a asignar \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcrimen_a2675734f5049f41b5fb5dbc4778df7f8}{}\index{crimen@{crimen}!set\+I\+D@{set\+I\+D}}
+\index{set\+I\+D@{set\+I\+D}!crimen@{crimen}}
+\subsubsection[{set\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}void crimen\+::set\+I\+D (
+\begin{DoxyParamCaption}
+\item[{long int \&}]{id}
+\end{DoxyParamCaption}
+)}\label{classcrimen_a2675734f5049f41b5fb5dbc4778df7f8}
+
+
+Asigna un I\+D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Valor a asignar \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcrimen_a9903f49178ad0001f39c03d018b05a2a}{}\index{crimen@{crimen}!set\+Iucr@{set\+Iucr}}
+\index{set\+Iucr@{set\+Iucr}!crimen@{crimen}}
+\subsubsection[{set\+Iucr}]{\setlength{\rightskip}{0pt plus 5cm}void crimen\+::set\+Iucr (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classcrimen_a9903f49178ad0001f39c03d018b05a2a}
+
+
+Asigna un código del tipo de delito según Illinois Uniform Crime Reporting, I\+U\+C\+R. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Código a asignar \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+crimen.\+h\item 
+crimen.\+hxx\end{DoxyCompactItemize}
