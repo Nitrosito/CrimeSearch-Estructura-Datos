@@ -13,7 +13,6 @@ using namespace std;
   	casenumber=x.casenumber;
   	date=x.date;
   	iucr=x.iucr;
-  	primarytype=x.primarytype;
   	description=x.description;
   	location_descrip=x.location_descrip;
   	arrest=x.arrest;
@@ -36,10 +35,6 @@ using namespace std;
 
   void crimen::setIucr(const string & s){
     iucr = s;
-  }
-
-  void crimen::setPrimaryType(const string & s){
-    primarytype = s;
   }
 
   void crimen::setDescription(const string & s){
@@ -104,11 +99,9 @@ using namespace std;
     //cout << "primarytype: " << s << endl;
     ini = fin+1;
     fin = cadena.find_first_of(",",ini);
-    s2 = cadena.substr(ini,fin-ini);
+    string s2 = cadena.substr(ini,fin-ini);
     //cout << "description: " << s << endl;
     setDescription(s+s2);
-
-  
 
     ini = fin+1;
     fin = cadena.find_first_of(",",ini);
@@ -206,10 +199,6 @@ using namespace std;
     return iucr;
   }
 
-  string crimen::getPrimaryType( ) const{
-    return primarytype;
-  }
-
   string crimen::getDescription( ) const{
     return description;
   }
@@ -239,7 +228,6 @@ using namespace std;
     casenumber=x.casenumber;
     date=x.date;
     iucr=x.iucr;
-    primarytype=x.primarytype;
     description=x.description;
     location_descrip=x.location_descrip;
     arrest=x.arrest;
@@ -249,7 +237,7 @@ using namespace std;
   }
 
   bool crimen::operator==(const crimen & x) const{
-  if(this->ID == x.ID && this-> casenumber == x.casenumber && this->date == x.date && this->iucr == x.iucr && this->primarytype == x.primarytype && this->description == x.description
+  if(this->ID == x.ID && this-> casenumber == x.casenumber && this->date == x.date && this->iucr == x.iucr && this->description == x.description
     && this->location_descrip == x.location_descrip && this->arrest == x.arrest && this->domestic == x.domestic && this->latitude == x.latitude && this->longitude == x.longitude){
       return true;
   }
@@ -274,6 +262,6 @@ using namespace std;
 
 
   ostream& operator<< ( ostream &os , const crimen& c){
-    os << c.ID << "," << c.casenumber << "," << c.date << "," << c.iucr << "," << c.primarytype << "," << c.description << "," << c.location_descrip << "," << c.arrest << "," << c.domestic << "," << c.latitude << "," << c.longitude;
+    os << c.ID << "," << c.casenumber << "," << c.date << "," << c.iucr << "," << c.description << "," << c.location_descrip << "," << c.arrest << "," << c.domestic << "," << c.latitude << "," << c.longitude;
     return os;
   }

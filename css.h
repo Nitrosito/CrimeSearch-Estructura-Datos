@@ -4,6 +4,12 @@
 
 #ifndef __CSS_H
 #define __CSS_H
+#include <iostream>
+#include <map>
+#include <vector>
+#include <list>
+#include <set>
+#include <unordered_map>
 #include "crimen.h"
 /* 3 TIPOS DE DATOS
    iterator que nos permite iterar por los delitos en orden creciente de ID
@@ -19,13 +25,57 @@ typedef string IUCR;
 
 class css{
 public:
+
+  //-----------------------------iterator.--------------------------------------//
+  class iterator {
+  private:
+  /* @brief it  itera sobre los ID del map
+   */
+  map<ID,crimen>::iterator it;
+  public:
+  pair<const ID, crimen > & operator*();
+
+  };
+  //-----------------------------------------------------------------------------//
+
+
+
+
+  //------------------------------IUCR_iterator----------------------------------//
+  class IUCR_iterator {
+  private:
+  /* @brief it_m itera sobre los IUCR del map
+   */
+  map<IUCR,set<ID> >::iterator it_m;
+  /* @brief it_s itera sobre los ID del set
+   */
+  set<ID>::iterator it_s;
+  public:
+  pair<const ID, crimen > & operator*();
+  };
+  //-----------------------------------------------------------------------------//
+
+
+
+  //------------------------------Date_iterator----------------------------------//
+  class Date_iterator {
+  private:
+  multimap<fecha, map<ID,crimen>::iterator>::iterator it_mm;
+  public:
+  pair<const ID, crimen > & operator*();
+
+  };
+  //-----------------------------------------------------------------------------//
+
+
+
 // METODOS CSS
 
 /**
  * @brief Lee los elementos dado un fichero e inserta la informacion en la BD
  * @param nombreDB nombre del fichero
  */
-void load(String nombreDB);
+void load(string nombreDB);
 
 /**
  * @brief Inserta un nuevo crimen en la base de datos
@@ -127,65 +177,26 @@ IUCR_iterator upper_bound(IUCR d);
  * @param i fecha de delitos a buscar
  * @return iterador que apunta al primer delito con Fecha mayor o igual a i
  */
-Date_iterator lower_bound(Fecha i);
+Date_iterator lower_bound(fecha i);
 
 /**
  * @brief Hacer busqueda por rango
  * @param d fecha de delitos a buscar
  * @return iterador que apunta al ultimo delito con fecha estrictamente mayor que d
  */
-Date_iterator upper_bound(Fecha d);
+Date_iterator upper_bound(fecha d);
 
 
 
-//-----------------------------iterator.--------------------------------------//
-class iterator {
-private:
-/* @brief it  itera sobre los ID del map
- */
-map<ID,Crimen>::iterator it;
-public:
-pair<const ID, Crimen > & operator*();
-
-};
-//-----------------------------------------------------------------------------//
-
-
-
-//------------------------------IUCR_iterator----------------------------------//
-class IUCR_iterator {
-private:
-/* @brief it_m itera sobre los IUCR del map
- */
-map<IUCR,set<ID> >::iterator it_m;
-/* @brief it_s itera sobre los ID del set
- */
-set<ID>::iterator it_s;
-public:
-pair<const ID, Crimen > & operator*();
-};
-//-----------------------------------------------------------------------------//
-
-
-
-//------------------------------Date_iterator----------------------------------//
-class Date_iterator {
-private:
-multimap<Date, map<ID,Crimen>::iterator > >::iterator it_mm;
-public:
-pair<const ID, Crimen > & operator*();
-
-};
-//-----------------------------------------------------------------------------//
 
 
 // Private CSS
 private:
-map<ID,Crimen> baseDatos;
-multimap<Date, map<ID,Crimen>::iterator > > DateAccess;
+map<ID,crimen> baseDatos;
+multimap<fecha, map<ID,crimen>::iterator> DateAccess;
 map<IUCR,set<ID> > IUCRAccess;
 unordered_map<Termino, set<ID> > index;
-map<Longitud,multimap<latitud, ID> > posicionGeo;
+map<Longitud,multimap<Latitud, ID> > posicionGeo;
 };
 
 #include "css.hxx"
