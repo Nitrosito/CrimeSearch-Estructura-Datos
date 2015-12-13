@@ -19,10 +19,14 @@ void css::load(string nombreDB){
         	if (!fe.eof()){
              aux.setCrimen(cadena);
              cout << cadena << endl;
-             //C.insert(aux);
+             C.insert(aux);
              i++;
           }
       }
   }
    fe.close();
+}
+
+void insert( const crimen & x){
+  x.getID
 }
