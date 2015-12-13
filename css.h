@@ -17,7 +17,7 @@ typedef unsigned int ID;
 typedef string Termino;
 typedef string IUCR;
 
-class CSS {
+class css{
 public:
 // METODOS CSS
 

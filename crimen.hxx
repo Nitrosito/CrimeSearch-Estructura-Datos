@@ -102,13 +102,13 @@ using namespace std;
     fin = cadena.find_first_of(",",ini);
     s = cadena.substr(ini,fin-ini);
     //cout << "primarytype: " << s << endl;
-    setPrimaryType(s);
-
     ini = fin+1;
     fin = cadena.find_first_of(",",ini);
-    s = cadena.substr(ini,fin-ini);
+    s2 = cadena.substr(ini,fin-ini);
     //cout << "description: " << s << endl;
-    setDescription(s);
+    setDescription(s+s2);
+
+  
 
     ini = fin+1;
     fin = cadena.find_first_of(",",ini);
