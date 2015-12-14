@@ -183,7 +183,7 @@ using namespace std;
     }
   }
 
-  long int crimen::getID( ) const{
+  unsigned int crimen::getID( ) const{
     return ID;
   }
 

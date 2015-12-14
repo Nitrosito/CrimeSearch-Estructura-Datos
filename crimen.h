@@ -50,8 +50,6 @@ class crimen {
    */
   void setIucr(const string & s);
 
-  void setPrimaryType(const string & s);
-
   void setDescription(const string & s);
 
   void setLocationDescription(const string & s);
@@ -84,7 +82,7 @@ class crimen {
    * @brief Obtiene el ID de un caso
    * @return ID del caso
    */
-  long int getID( ) const;
+  unsigned int getID( ) const;
 
   /**
    * @brief Obtiene el numero de Caso
@@ -99,8 +97,6 @@ class crimen {
   fecha getDate( ) const;
 
   string getIucr( ) const;
-
-  string getPrimaryType( ) const;
 
   string getDescription( ) const;
 
@@ -129,11 +125,10 @@ class crimen {
    friend ostream& operator<< ( ostream& , const crimen& );
 
    //Atributos
-   long int ID;             // Identificador del delito
+   unsigned int ID;             // Identificador del delito
    string casenumber;       // Código del caso
    fecha date;              // Fecha en formato mm/dd/aaaa hh:mm:ss AM/PM
    string iucr;             // Código del tipo de delito según Illinois Uniform Crime Reporting, IUCR
-   string primarytype;      // Tipo de delito
    string description;       // Descripción más detallada
    string location_descrip;  // Descripción del tipo de localización
    bool arrest;              // Si hay arrestos o no

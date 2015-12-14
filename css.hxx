@@ -18,8 +18,8 @@ void css::load(string nombreDB){
         getline(fe,cadena,'\n');
         	if (!fe.eof()){
              aux.setCrimen(cadena);
-             cout << cadena << endl;
-             C.insert(aux);
+            //cout << cadena << endl;
+             insert(aux);
              i++;
           }
       }
@@ -27,6 +27,6 @@ void css::load(string nombreDB){
    fe.close();
 }
 
-void insert( const crimen & x){
-  x.getID
+void css::insert( const crimen & x){
+   baseDatos.insert(pair<ID,crimen>(x.getID(),x));
 }

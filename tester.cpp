@@ -3,9 +3,9 @@
 #include "css.h"
 #include <iostream>
 #include <fstream>
-
 using namespace std;
 int main(){
     css database;
     database.load("crimenes.csv");
+
 }
