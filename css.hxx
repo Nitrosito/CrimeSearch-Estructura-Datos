@@ -21,7 +21,7 @@ void css::load(string nombreDB){
         getline(fe,cadena,'\n');
         	if (!fe.eof()){
              aux.setCrimen(cadena);
-            //cout << cadena << endl;
+            cout << cadena << endl;
              insert(aux);
              i++;
           }
@@ -31,7 +31,13 @@ void css::load(string nombreDB){
    cout << "Importados en map baseDatos "  << baseDatos.size() << endl;
    cout << "Importados en multimap DateAccess " << DateAccess.size() << endl;
    cout << "Importados en map IUCRAccess " << IUCRAccess.size() << endl;
+   for(auto& it:IUCRAccess){
+     cout << "------------ \n" << it.first << " IUCR " << endl;
+     for(auto& it2:it.second)
+     cout << it2 << " ID" << endl;
 
+     cout << "------------" << endl;
+   }
 
   cout << "Importados en unordered_map index " << index.size() << endl;
 
@@ -54,16 +60,13 @@ void css::insert( const crimen & x){
    DateAccess.insert(crimenconfecha);
 
    //Inserto en map ordenado por IUCR
-   set<ID> sid;
-   sid.insert(x.getID());
-   pair<IUCR,set<ID>> iucrd(x.getIucr(),sid);
-   IUCRAccess.insert(iucrd);
+   IUCRAccess[x.getIucr()].insert(x.getID());
 
    //Inserto en unordered_map
-   set<ID> usid;
-   usid.insert(x.getID());
-   pair<Termino,set<ID>> umap(x.getDescription,usid);
-   index.insert()umap;
+  //  set<ID> usid;
+  //  usid.insert(x.getID());
+  //  pair<Termino,set<ID>> umap(x.getDescription,usid);
+  //  index.insert()umap;
 
 }
 
