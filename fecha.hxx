@@ -12,6 +12,7 @@ fecha::fecha(){
 
 fecha::fecha(const string & s){
   string aux;
+  //09/17/2015 11:37:18 AM
   aux = s.substr(0,2);
   mon = stoi(aux);
   aux = s.substr(3,2);
@@ -70,7 +71,7 @@ string fecha::toString()const{
   }
   s = s+":"+to_string(min)+":"+to_string(sec)+m;
   return s;
-}    
+}
 
   //Compara fechas, si UNA ES IGUAL A OTRA
 bool fecha::operator==(const fecha & f) const{
@@ -114,7 +115,7 @@ bool fecha::operator<(const fecha & f)const{
                 return false;
               }
             }
-          } 
+          }
         }
       }
     }
@@ -219,7 +220,7 @@ bool fecha::operator<=(const fecha & f) const{
   }
 }
 
-   
+
 bool fecha::operator>=(const fecha & f) const{
   if(this->year > f.year)
 		return true;
@@ -234,7 +235,7 @@ bool fecha::operator>=(const fecha & f) const{
 			if(this->mday > f.mday)
 				return true;
 			else if(this->mday < f.mday)
-				return false;			
+				return false;
 			else{
 				if(this->hour > f.hour)
 					return true;
@@ -252,12 +253,12 @@ bool fecha::operator>=(const fecha & f) const{
 						       return false;
 					}
 				}
-			}											
+			}
 		}
 	}
 }
 
-  
+
 bool fecha::operator!=(const fecha & f)const {
   if(*this==f)
     return false;
@@ -266,6 +267,6 @@ bool fecha::operator!=(const fecha & f)const {
 }
 
 ostream& operator<<( ostream &os, const fecha & f){
-  os << f.mon << "/" << f.mday << "/" << f.year << " " << f.hour << ":" << f.min << ":" << f.sec; 
+  os << f.mon << "/" << f.mday << "/" << f.year << " " << f.hour << ":" << f.min << ":" << f.sec;
   return os;
 }

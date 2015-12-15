@@ -29,7 +29,14 @@ void css::load(string nombreDB){
   }
   #if defined(DEBUG)
    cout << "Importados en map baseDatos "  << baseDatos.size() << endl;
+   for(auto& it:baseDatos)
+    cout << it.first << " " << it.second << endl;
+
    cout << "Importados en multimap DateAccess " << DateAccess.size() << endl;
+   for(auto& it:DateAccess){
+    cout << it.first << " " << endl;
+   }
+
    cout << "Importados en map IUCRAccess " << IUCRAccess.size() << endl;
    for(auto& it:IUCRAccess){
      cout << "------------ \n" << it.first << " IUCR " << endl;
@@ -44,6 +51,13 @@ void css::load(string nombreDB){
     cout << it.first << " Termino" <<endl;
     for(auto& it2:it.second)
       cout << it2 << " ID" << endl;
+  }
+
+  cout << "Importados en map posicionGeo" << posicionGeo.size() << endl;
+  for(auto& it:posicionGeo){
+    cout << it.first << endl;
+    for(auto &it2:it.second)
+    cout << it2.first << " " << it2.second << "ID" << endl;
   }
 
 
@@ -70,7 +84,6 @@ void css::insert( const crimen & x){
    //Inserto en unordered_map
    string descripcion = x.getDescription();
    string s;
-
    int ini = 0;
    int fin = descripcion.find_first_of(" ");
    s = descripcion.substr(ini,fin);
@@ -78,7 +91,6 @@ void css::insert( const crimen & x){
      //cout << s << endl;
      index[s].insert(idcrimen);
    }
-
    while(fin!=-1){
      ini = fin+1;
      fin = descripcion.find_first_of(" /:",ini);
@@ -89,6 +101,9 @@ void css::insert( const crimen & x){
     }
   }
 
+  //Inserto en map Longitud
+  pair<Latitud,ID> coor(x.getLatitude(),idcrimen);
+  posicionGeo[x.getLongitude()].insert(coor);
 
 
 

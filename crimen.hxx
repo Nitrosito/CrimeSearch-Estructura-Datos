@@ -102,7 +102,7 @@ using namespace std;
     fin = cadena.find_first_of(",",ini);
     string s2 = cadena.substr(ini,fin-ini);
     setDescription(s + " " + s2);
-    cout << "DESCRIPCION: " << getDescription() <<endl;
+    //cout << "DESCRIPCION: " << getDescription() <<endl;
 
     ini = fin+1;
     fin = cadena.find_first_of(",",ini);
