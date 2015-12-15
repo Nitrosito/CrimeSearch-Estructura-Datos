@@ -97,11 +97,12 @@ using namespace std;
     fin = cadena.find_first_of(",",ini);
     s = cadena.substr(ini,fin-ini);
     //cout << "primarytype: " << s << endl;
+
     ini = fin+1;
     fin = cadena.find_first_of(",",ini);
     string s2 = cadena.substr(ini,fin-ini);
-    //cout << "description: " << s << endl;
-    setDescription(s+s2);
+    setDescription(s + " " + s2);
+    cout << "DESCRIPCION: " << getDescription() <<endl;
 
     ini = fin+1;
     fin = cadena.find_first_of(",",ini);
@@ -171,7 +172,6 @@ using namespace std;
       double d=stod(s);
       setLatitude(d);
     }
-
 
     ini = fin+1;
     fin = cadena.find_first_of(",",ini);

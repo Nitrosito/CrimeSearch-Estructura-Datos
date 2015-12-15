@@ -40,6 +40,11 @@ void css::load(string nombreDB){
    }
 
   cout << "Importados en unordered_map index " << index.size() << endl;
+  for(auto& it:index){
+    cout << it.first << " Termino" <<endl;
+    for(auto& it2:it.second)
+      cout << it2 << " ID" << endl;
+  }
 
 
   #endif
@@ -60,13 +65,32 @@ void css::insert( const crimen & x){
    DateAccess.insert(crimenconfecha);
 
    //Inserto en map ordenado por IUCR
-   IUCRAccess[x.getIucr()].insert(x.getID());
+   IUCRAccess[x.getIucr()].insert(idcrimen);
 
    //Inserto en unordered_map
-  //  set<ID> usid;
-  //  usid.insert(x.getID());
-  //  pair<Termino,set<ID>> umap(x.getDescription,usid);
-  //  index.insert()umap;
+   string descripcion = x.getDescription();
+   string s;
+
+   int ini = 0;
+   int fin = descripcion.find_first_of(" ");
+   s = descripcion.substr(ini,fin);
+   if(!s.empty()){
+     //cout << s << endl;
+     index[s].insert(idcrimen);
+   }
+
+   while(fin!=-1){
+     ini = fin+1;
+     fin = descripcion.find_first_of(" /:",ini);
+     s = descripcion.substr(ini,fin-ini);
+     if(s.size()>1){
+      index[s].insert(idcrimen);
+      //cout<< s<<endl;
+    }
+  }
+
+
+
 
 }
 
