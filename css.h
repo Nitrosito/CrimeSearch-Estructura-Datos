@@ -34,7 +34,13 @@ public:
   map<ID,crimen>::iterator it;
   public:
   pair<const ID, crimen > & operator*();
+  bool operator!=(css::iterator it);
+  bool operator==(css::iterator it);
+  iterator operator++(int);
+  iterator operator++();
 
+
+  friend css;
   };
   //-----------------------------------------------------------------------------//
 
@@ -52,6 +58,7 @@ public:
   set<ID>::iterator it_s;
   public:
   pair<const ID, crimen > & operator*();
+  friend css;
   };
   //-----------------------------------------------------------------------------//
 
@@ -63,6 +70,7 @@ public:
   multimap<fecha, map<ID,crimen>::iterator>::iterator it_mm;
   public:
   pair<const ID, crimen > & operator*();
+  friend css;
 
   };
   //-----------------------------------------------------------------------------//

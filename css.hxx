@@ -113,5 +113,44 @@ void css::insert( const crimen & x){
 
 
 //-----------------------------------ITERATOR-----------------------------------//
+css::iterator css::begin(){
+  css::iterator res;
+  res.it=baseDatos.begin();
+  return res;
+}
 
+css::iterator css::end(){
+  css::iterator res;
+  res.it=baseDatos.end();
+  return res;
+}
+
+bool css::iterator::operator!=(css::iterator in){
+  if(it!=in.it)
+    return true;
+
+  return false;
+}
+
+bool css::iterator::operator==(css::iterator in){
+  if(it==in.it)
+    return true;
+
+  return false;
+}
+
+pair<const ID,crimen>& css::iterator::operator*(){
+  return *it;
+}
+
+css::iterator css::iterator::operator++(int){    //Post incremento
+  css::iterator aux(*this);
+  ++it;
+  return aux;
+}
+
+css::iterator css::iterator::operator++(){    //Post incremento
+  ++it;
+  return *this;
+}
 //-----------------------------------------------------------------------------//
