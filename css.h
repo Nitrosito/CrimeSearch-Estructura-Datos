@@ -50,6 +50,7 @@ public:
   //------------------------------IUCR_iterator----------------------------------//
   class IUCR_iterator {
   private:
+  css *pcss;
   /* @brief it_m itera sobre los IUCR del map
    */
   map<IUCR,set<ID> >::iterator it_m;
@@ -58,6 +59,11 @@ public:
   set<ID>::iterator it_s;
   public:
   pair<const ID, crimen > & operator*();
+  bool operator!=(css::IUCR_iterator it);
+  bool operator==(css::IUCR_iterator it);
+  IUCR_iterator operator++(int);
+  IUCR_iterator operator++();
+
   friend css;
   };
   //-----------------------------------------------------------------------------//

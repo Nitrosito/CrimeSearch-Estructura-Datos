@@ -67,6 +67,8 @@ void css::load(string nombreDB){
 
 }
 
+
+
 void css::insert( const crimen & x){
    unsigned int idcrimen = x.getID();
    pair<ID,crimen> crimenx(idcrimen,x);
@@ -104,15 +106,9 @@ void css::insert( const crimen & x){
   //Inserto en map Longitud
   pair<Latitud,ID> coor(x.getLatitude(),idcrimen);
   posicionGeo[x.getLongitude()].insert(coor);
-
-
-
 }
 
-//-----------------------------------------------------------------------------//
 
-
-//-----------------------------------ITERATOR-----------------------------------//
 css::iterator css::begin(){
   css::iterator res;
   res.it=baseDatos.begin();
@@ -125,6 +121,25 @@ css::iterator css::end(){
   return res;
 }
 
+css::IUCR_iterator css::ibegin(){
+  css::IUCR_iterator res;
+  res.pcss=this;
+  res.it_m=IUCRAccess.begin();
+  res.it_s=res.it_m->second.begin();
+  return res;
+}
+
+css::IUCR_iterator css::iend(){
+  css::IUCR_iterator res;
+  res.it_m=IUCRAccess.end();
+  res.it_s=res.it_m->second.end();
+  return res;
+}
+
+//-----------------------------------------------------------------------------//
+
+
+//-----------------------------------ITERATOR-----------------------------------//
 bool css::iterator::operator!=(css::iterator in){
   if(it!=in.it)
     return true;
@@ -151,6 +166,44 @@ css::iterator css::iterator::operator++(int){    //Post incremento
 
 css::iterator css::iterator::operator++(){    //Post incremento
   ++it;
+  return *this;
+}
+//-----------------------------------------------------------------------------//
+
+
+
+//-----------------------------IUCR_ITERATOR-----------------------------------//
+
+bool css::IUCR_iterator::operator!=(css::IUCR_iterator in){
+  if(it_s!=in.it_s && it_m!=in.it_m)
+    return true;
+
+  return false;
+}
+
+bool css::IUCR_iterator::operator==(css::IUCR_iterator in){
+  if(it_s==in.it_s)
+    return true;
+
+  return false;
+}
+
+pair<const ID,crimen>& css::IUCR_iterator::operator*(){
+  return *pcss->baseDatos.find(*(it_s));
+}
+
+css::IUCR_iterator css::IUCR_iterator::operator++(int){    //Post incremento
+   css::IUCR_iterator aux(*this);
+   it_s++;
+   if(it_s==it_m->second.end()){
+     it_m++;
+     it_s= it_m->second.begin();
+   }
+   return aux;
+}
+
+css::IUCR_iterator css::IUCR_iterator::operator++(){    //Post incremento
+  ++it_s;
   return *this;
 }
 //-----------------------------------------------------------------------------//
