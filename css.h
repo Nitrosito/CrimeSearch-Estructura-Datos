@@ -73,9 +73,14 @@ public:
   //------------------------------Date_iterator----------------------------------//
   class Date_iterator {
   private:
+  css *pcss;
   multimap<fecha, map<ID,crimen>::iterator>::iterator it_mm;
   public:
   pair<const ID, crimen > & operator*();
+  bool operator!=(css::Date_iterator it);
+  bool operator==(css::Date_iterator it);
+  Date_iterator operator++(int);
+  Date_iterator operator++();
   friend css;
 
   };

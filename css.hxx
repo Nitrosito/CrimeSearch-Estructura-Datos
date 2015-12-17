@@ -17,7 +17,7 @@ void css::load(string nombreDB){
     getline(fe,cadena,'\n'); //leo la cabecera del fichero
     crimen aux;
     int i = 0;
-     while ( /*!fe.eof()*/i<10 ){
+     while ( /*!fe.eof()*/i<25 ){
         getline(fe,cadena,'\n');
         	if (!fe.eof()){
              aux.setCrimen(cadena);
@@ -72,17 +72,13 @@ void css::load(string nombreDB){
 void css::insert( const crimen & x){
    unsigned int idcrimen = x.getID();
    pair<ID,crimen> crimenx(idcrimen,x);
-
    // Inserto crimen en el map ordenado por ID
    map<ID,crimen>::iterator it_insert = (baseDatos.insert(crimenx)).first;
-
    //Inserto en el multimap ordenado por fecha
    pair<fecha,map<ID,crimen>::iterator> crimenconfecha(x.getDate(),it_insert);
    DateAccess.insert(crimenconfecha);
-
    //Inserto en map ordenado por IUCR
    IUCRAccess[x.getIucr()].insert(idcrimen);
-
    //Inserto en unordered_map
    string descripcion = x.getDescription();
    string s;
@@ -102,7 +98,6 @@ void css::insert( const crimen & x){
       //cout<< s<<endl;
     }
   }
-
   //Inserto en map Longitud
   pair<Latitud,ID> coor(x.getLatitude(),idcrimen);
   posicionGeo[x.getLongitude()].insert(coor);
@@ -134,6 +129,30 @@ css::IUCR_iterator css::iend(){
   res.it_m=IUCRAccess.end();
   res.it_s=res.it_m->second.end();
   return res;
+}
+
+css::Date_iterator css::dbegin(){
+  css::Date_iterator res;
+  res.pcss=this;
+  res.it_mm = DateAccess.begin();
+  return res;
+}
+
+css::Date_iterator css::dend(){
+  css::Date_iterator res;
+  res.pcss=this;
+  res.it_mm = DateAccess.end();
+  return res;
+}
+
+css::iterator css::find_ID(const unsigned int ID){
+  css::iterator res;
+  res.it=baseDatos.find(ID);
+  return res;
+}
+
+void css::setArrest(const unsigned int ID, bool value){
+  baseDatos[ID].setArrest(value);
 }
 
 //-----------------------------------------------------------------------------//
@@ -206,4 +225,37 @@ css::IUCR_iterator css::IUCR_iterator::operator++(){    //Post incremento
   ++it_s;
   return *this;
 }
+//-----------------------------------------------------------------------------//
+
+
+//------------------------------Date_iterator----------------------------------//
+pair<const ID,crimen> &css::Date_iterator::operator*(){
+  return *it_mm->second;
+}
+
+bool css::Date_iterator::operator!=(css::Date_iterator it){
+  if( (* (*this) ).first != (*it).first )
+    return true;
+
+  return false;
+}
+
+bool css::Date_iterator::operator==(css::Date_iterator it){
+  if( (* (*this) ).first == (*it).first )
+    return true;
+
+  return false;
+}
+
+css::Date_iterator css::Date_iterator::operator++(int){
+  css::Date_iterator aux(*this);
+  it_mm++;
+  return *this;
+}
+
+css::Date_iterator css::Date_iterator::operator++(){
+  it_mm++;
+  return *this;
+}
+
 //-----------------------------------------------------------------------------//
