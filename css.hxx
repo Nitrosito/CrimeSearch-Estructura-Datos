@@ -155,6 +155,13 @@ void css::setArrest(const unsigned int ID, bool value){
   baseDatos[ID].setArrest(value);
 }
 
+css::IUCR_iterator css::lower_bound(IUCR i){
+  css::IUCR_iterator res;
+  res.it_m = IUCRAccess.find(i);
+  res.it_s=res.it_m->second.begin();
+  return res;
+}
+
 //-----------------------------------------------------------------------------//
 
 
@@ -208,7 +215,7 @@ bool css::IUCR_iterator::operator==(css::IUCR_iterator in){
 }
 
 pair<const ID,crimen>& css::IUCR_iterator::operator*(){
-  return *pcss->baseDatos.find(*(it_s));
+  return *(pcss->baseDatos.find(*it_s));
 }
 
 css::IUCR_iterator css::IUCR_iterator::operator++(int){    //Post incremento

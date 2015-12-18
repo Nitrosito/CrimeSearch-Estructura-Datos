@@ -55,6 +55,11 @@ int main(){
     cout << "arrestado? " << (*database.begin()).second.getArrest() << endl;
 
 
+    cout << "\n\n -----lower_bound--IUCR 0820---" << endl;
+    css::IUCR_iterator lb;
+    lb = database.lower_bound("0820");
+    cout << (*lb).second << endl;
+
 
 
 }
