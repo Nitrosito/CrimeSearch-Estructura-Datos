@@ -65,6 +65,18 @@ int main(){
     ub = database.upper_bound("0820");
     cout << (*ub).second << endl;
 
+    cout << "\n\n -----upper_bound--FECHA " << (*ub).second.getDate() <<  endl;
+    fecha mifecha;
+    mifecha = (*ub).second.getDate();
+    css::Date_iterator dil;
+    dil=database.upper_bound(mifecha);
+    cout << (*dil).second << endl;
+
+    cout << "\n\n -----lower_bound--FECHA " << (*ub).second.getDate() <<  endl;
+    css::Date_iterator dilb;
+    dilb=database.lower_bound(mifecha);
+    cout << (*dilb).second << endl;
+
 
 
 }

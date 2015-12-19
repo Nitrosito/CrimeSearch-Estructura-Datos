@@ -126,6 +126,7 @@ css::IUCR_iterator css::ibegin(){
 
 css::IUCR_iterator css::iend(){
   css::IUCR_iterator res;
+  res.pcss=this;
   res.it_m=IUCRAccess.end();
   res.it_s=res.it_m->second.end();
   return res;
@@ -170,6 +171,21 @@ css::IUCR_iterator css::upper_bound(IUCR i){
   res.it_s= res.it_m->second.begin();
   return res;
 }
+
+css::Date_iterator css::lower_bound(fecha i){
+  css::Date_iterator res;
+  res.pcss =this;
+  res.it_mm= DateAccess.lower_bound(i);
+  return res;
+}
+
+css::Date_iterator css::upper_bound(fecha i){
+  css::Date_iterator res;
+  res.pcss =this;
+  res.it_mm= DateAccess.upper_bound(i);
+  return res;
+}
+
 
 //-----------------------------------------------------------------------------//
 
