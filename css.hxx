@@ -157,8 +157,17 @@ void css::setArrest(const unsigned int ID, bool value){
 
 css::IUCR_iterator css::lower_bound(IUCR i){
   css::IUCR_iterator res;
-  res.it_m = IUCRAccess.find(i);
-  res.it_s=res.it_m->second.begin();
+  res.pcss =this;
+  res.it_m= IUCRAccess.lower_bound(i);
+  res.it_s= res.it_m->second.begin();
+  return res;
+}
+
+css::IUCR_iterator css::upper_bound(IUCR i){
+  css::IUCR_iterator res;
+  res.pcss =this;
+  res.it_m= IUCRAccess.upper_bound(i);
+  res.it_s= res.it_m->second.begin();
   return res;
 }
 

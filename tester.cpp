@@ -60,6 +60,11 @@ int main(){
     lb = database.lower_bound("0820");
     cout << (*lb).second << endl;
 
+    cout << "\n\n -----upper_bound--IUCR 0820---" << endl;
+    css::IUCR_iterator ub;
+    ub = database.upper_bound("0820");
+    cout << (*ub).second << endl;
+
 
 
 }
