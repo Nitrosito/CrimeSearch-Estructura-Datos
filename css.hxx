@@ -17,7 +17,7 @@ void css::load(string nombreDB){
     getline(fe,cadena,'\n'); //leo la cabecera del fichero
     crimen aux;
     int i = 0;
-     while ( /*!fe.eof()*/i<25 ){
+     while ( /*!fe.eof()*/i<10 ){
         getline(fe,cadena,'\n');
         	if (!fe.eof()){
              aux.setCrimen(cadena);
@@ -103,6 +103,61 @@ void css::insert( const crimen & x){
   posicionGeo[x.getLongitude()].insert(coor);
 }
 
+bool css::erase( unsigned int ID){
+  crimen crimenborrar = baseDatos[ID];
+  //borro de contenedor por IUCR
+  if(!IUCRAccess.erase(crimenborrar.getIucr()))
+    return false;
+
+  //borro date access
+  css::Date_iterator borrar;
+  borrar.it_mm=DateAccess.find(crimenborrar.getDate());
+  //Se podria hacer mas eficiente limitando la busqueda
+  //desde el dia del crimen al siguiente...
+  for(;borrar.it_mm!=DateAccess.end();borrar++){
+    if((*borrar).first==ID){
+      DateAccess.erase(borrar.it_mm);
+    }
+  }
+
+  //borro de index
+  string descripcion = crimenborrar.getDescription();
+  string s;
+  int ini = 0;
+  int fin = descripcion.find_first_of(" ");
+  s = descripcion.substr(ini,fin);
+  if(!s.empty()){
+    index[s].erase(crimenborrar.getID());
+    if(index[s].size()==0)
+      index.erase(s);
+  }
+  while(fin!=-1){
+    ini = fin+1;
+    fin = descripcion.find_first_of(" /:",ini);
+    s = descripcion.substr(ini,fin-ini);
+    if(s.size()>1){
+      index[s].erase(crimenborrar.getID());
+      if(index[s].size()==0)
+        index.erase(s);
+   }
+  }
+
+  //borro en posicionGeo
+  posicionGeo[crimenborrar.getLongitude()].erase(crimenborrar.getLatitude());
+  if(posicionGeo[crimenborrar.getLongitude()].size()==0)
+    posicionGeo.erase(crimenborrar.getLongitude());
+
+  //borro de baseDatos
+  baseDatos.erase(ID);
+}
+
+void css::mostrarTamanios(){
+  cout << "Tamaño baseDatos: " << baseDatos.size() << endl;
+  cout << "Tamaño DateAccess: " << DateAccess.size() << endl;
+  cout << "Tamaño IUCRAccess: " << IUCRAccess.size() << endl;
+  cout << "Tamaño index: " << index.size() << endl;
+  cout << "Tamaño posicionGeo: " << posicionGeo.size() << endl << endl;
+}
 
 css::iterator css::begin(){
   css::iterator res;

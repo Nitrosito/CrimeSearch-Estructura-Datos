@@ -55,14 +55,14 @@ int main(){
     cout << "arrestado? " << (*database.begin()).second.getArrest() << endl;
 
 
-    cout << "\n\n -----lower_bound--IUCR 0820---" << endl;
+    cout << "\n\n -----lower_bound--IUCR 0337---" << endl;
     css::IUCR_iterator lb;
-    lb = database.lower_bound("0820");
+    lb = database.lower_bound("0337");
     cout << (*lb).second << endl;
 
-    cout << "\n\n -----upper_bound--IUCR 0820---" << endl;
+    cout << "\n\n -----upper_bound--IUCR 0337---" << endl;
     css::IUCR_iterator ub;
-    ub = database.upper_bound("0820");
+    ub = database.upper_bound("0337");
     cout << (*ub).second << endl;
 
     cout << "\n\n -----upper_bound--FECHA " << (*ub).second.getDate() <<  endl;
@@ -76,6 +76,18 @@ int main(){
     css::Date_iterator dilb;
     dilb=database.lower_bound(mifecha);
     cout << (*dilb).second << endl;
+
+    cout << "\n\n -----ERASE--ID 10231612" <<  endl;
+    cout << "antes borrar: " << endl;
+    database.mostrarTamanios();
+    bool borrado = database.erase(10230979);
+    if(borrado){
+      cout << "BORRADO CON EXITO" << endl;
+      database.mostrarTamanios();
+    }
+    else
+      cout << "No se ha podido borrar" << endl;
+
 
 
 

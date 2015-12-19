@@ -205,6 +205,7 @@ Date_iterator lower_bound(fecha i);
  */
 Date_iterator upper_bound(fecha d);
 
+void mostrarTamanios();
 
 
 
