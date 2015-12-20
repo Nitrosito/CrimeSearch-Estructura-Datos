@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setarrest',['setArrest',['../classcrimen.html#ae08b85470038469179a01ba753b7641a',1,'crimen::setArrest()'],['../classCSS.html#ae63486750a33cba9bb04d07a308bfbbb',1,'CSS::setArrest()']]],
+  ['setarrest',['setArrest',['../classcrimen.html#ae08b85470038469179a01ba753b7641a',1,'crimen::setArrest()'],['../classcss.html#a50bc0dd8e01dae1a07ae7db13c474e5b',1,'css::setArrest()']]],
   ['setcasenumber',['setCaseNumber',['../classcrimen.html#a98ee8c42a0ec09c704c5f17e812a6bd5',1,'crimen']]],
   ['setcrimen',['setCrimen',['../classcrimen.html#a24c7850a61d6435929450b7b10964f07',1,'crimen']]],
   ['setdate',['setDate',['../classcrimen.html#ac308c139bb8b599a7badbecd91bfbc5a',1,'crimen']]],

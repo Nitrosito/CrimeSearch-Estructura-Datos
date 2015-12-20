@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['query',['Query',['../classCSS.html#a722ce77260c4f3f3b324a218c31a65c1',1,'CSS']]]
+  ['query',['Query',['../classcss.html#a3a3274b78822a60f055b8d74e5f38a66',1,'css']]]
 ];

@@ -261,6 +261,30 @@ css::Date_iterator css::upper_bound(fecha i){
   return res;
 }
 
+vector<pair<ID,float> > css::Query(list<string> & q, int k){
+  pair<ID,float> inres;
+  vector<pair<ID,float>> res;
+  //UN TERMINO
+  if(q.size()==1){
+      unordered_map<Termino,set<ID>>::iterator primero;
+      vector<pair<ID,float>> res;
+      pair<ID,float> inres;
+
+      primero=index.find((*q.begin()));
+      set<ID>::iterator primerid;
+      primerid = (*primero).second.begin();
+
+      for(;primerid != (*primero).second.end(); primerid++){
+        inres.first=(*primerid);
+        inres.second=1.0;
+        res.push_back(inres);
+      }
+      return res;
+  }
+  
+}
+
+
 
 //-----------------------------------------------------------------------------//
 

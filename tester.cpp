@@ -77,6 +77,25 @@ int main(){
     dilb=database.lower_bound(mifecha);
     cout << (*dilb).second << endl;
 
+
+
+    cout << "\n\n -----inArea-- (-88,40.748) --( -80.7617, 50.7617) " <<  endl;
+      list<ID> area;
+      area = database.inArea(-88,40.748,89.7617,50.7617);
+
+      for(auto it=begin(area); it!=end(area);it++)
+        cout << "--> Crimen con ID: " << (*it) << endl;
+
+    cout << "\n\n -----Query-- DOMESTIC,1" <<  endl;
+    vector<pair<ID,float>> resultado;
+    list<string> p1;
+    p1.push_back("DOMESTIC");
+    resultado = database.Query(p1,1);
+    for(auto it=resultado.begin();it!=resultado.end();it++){
+      cout << "ID " <<  (*it).first << " " << (*it).second << endl;
+    }
+
+
     cout << "\n\n -----ERASE--ID 10231612" <<  endl;
     cout << "antes borrar: " << endl;
     database.mostrarTamanios();
@@ -87,15 +106,6 @@ int main(){
     }
     else
       cout << "No se ha podido borrar" << endl;
-
-
-    cout << "\n\n -----inArea-- (-88,40.748) --( -80.7617, 50.7617) " <<  endl;
-      list<ID> area;
-      area = database.inArea(-88,40.748,89.7617,50.7617);
-
-      for(auto it=begin(area); it!=end(area);it++)
-        cout << "--> Crimen con ID: " << (*it) << endl;
-
 
 
 

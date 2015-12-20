@@ -109,91 +109,86 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcrimen.html#a9903f49178ad0001f39c03d018b05a2a">setIucr</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> setPrimaryType(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> setDescription(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> setDescription(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> setLocationDescription(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> setLocationDescription(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcrimen.html#ae08b85470038469179a01ba753b7641a">setArrest</a>(<span class="keywordtype">bool</span> a);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcrimen.html#a3ec14cf4bb0464350d8efd98d2679d41">setDomestic</a>(<span class="keywordtype">bool</span> d);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcrimen.html#ae08b85470038469179a01ba753b7641a">setArrest</a>(<span class="keywordtype">bool</span> a);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcrimen.html#a3ec14cf4bb0464350d8efd98d2679d41">setDomestic</a>(<span class="keywordtype">bool</span> d);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> setLatitude(<span class="keywordtype">double</span> &amp; lat);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> setLatitude(<span class="keywordtype">double</span> &amp; lat);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> setLongitude(<span class="keywordtype">double</span> &amp; lon);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> setLongitude(<span class="keywordtype">double</span> &amp; lon);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcrimen.html#a24c7850a61d6435929450b7b10964f07">setCrimen</a>(<span class="keywordtype">string</span> &amp; cadena);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcrimen.html#a24c7850a61d6435929450b7b10964f07">setCrimen</a>(<span class="keywordtype">string</span> &amp; cadena);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="classcrimen.html#a855eab30a304a6498828cb5d85a4e0e3">getID</a>( ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classcrimen.html#ab3c025eb20cdcea9192ee190fa2af015">getCaseNumber</a>( ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="classfecha.html">fecha</a> <a class="code" href="classcrimen.html#a8a6712e536211034819441ab87e1c215">getDate</a>( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classcrimen.html#abc39a10bdf42cbc38f51872cbf02c69d">getID</a>( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">string</span> <a class="code" href="classcrimen.html#ab3c025eb20cdcea9192ee190fa2af015">getCaseNumber</a>( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classfecha.html">fecha</a> <a class="code" href="classcrimen.html#a8a6712e536211034819441ab87e1c215">getDate</a>( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">string</span> getIucr( ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">string</span> getIucr( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">string</span> getDescription( ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">string</span> getPrimaryType( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">string</span> getLocationDescription( ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">string</span> getDescription( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">bool</span> getArrest( ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">string</span> getLocationDescription( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">bool</span> getDomestic( ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">bool</span> getArrest( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">double</span> getLatitude( ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">bool</span> getDomestic( ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">double</span> getLongitude( ) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">double</span> getLatitude( ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">double</span> getLongitude( ) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   <a class="code" href="classcrimen.html">crimen</a> &amp; <a class="code" href="classcrimen.html#a612c4d3beaabd588703e4a580caf04e5">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a> &amp; c);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;   <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a> &amp; x) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   <a class="code" href="classcrimen.html">crimen</a> &amp; <a class="code" href="classcrimen.html#a612c4d3beaabd588703e4a580caf04e5">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a> &amp; c);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a> &amp; x) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;   <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a> &amp; x) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   <span class="keywordtype">bool</span> operator&gt;(<span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a> &amp; x) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;   <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a> &amp; x) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;   <span class="keywordtype">bool</span> operator&gt;(<span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a> &amp; x) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;   <span class="keyword">friend</span> ostream&amp; operator&lt;&lt; ( ostream&amp; , <span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a>&amp; );</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;   <span class="keyword">friend</span> ostream&amp; operator&lt;&lt; ( ostream&amp; , <span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a>&amp; );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;   <span class="comment">//Atributos</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="keywordtype">long</span> <span class="keywordtype">int</span> ID;             <span class="comment">// Identificador del delito</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   <span class="keywordtype">string</span> casenumber;       <span class="comment">// Código del caso</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   <a class="code" href="classfecha.html">fecha</a> date;              <span class="comment">// Fecha en formato mm/dd/aaaa hh:mm:ss AM/PM</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   <span class="keywordtype">string</span> iucr;             <span class="comment">// Código del tipo de delito según Illinois Uniform Crime Reporting, IUCR</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;   <span class="keywordtype">string</span> primarytype;      <span class="comment">// Tipo de delito</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;   <span class="keywordtype">string</span> description;       <span class="comment">// Descripción más detallada</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   <span class="keywordtype">string</span> location_descrip;  <span class="comment">// Descripción del tipo de localización</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   <span class="keywordtype">bool</span> arrest;              <span class="comment">// Si hay arrestos o no</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;   <span class="keywordtype">bool</span> domestic;            <span class="comment">// Si es un crimen domestico o no</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;   <span class="keywordtype">double</span> latitude;          <span class="comment">// Coordenada de latitud</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;   <span class="keywordtype">double</span> longitude;         <span class="comment">// Coordenada de longitud</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;};</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  ostream&amp; <a class="code" href="fecha_8h.html#a9787de38b43ae62ba2c0812f3dd18394">operator&lt;&lt; </a>( ostream&amp; , <span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a>&amp; );</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#include &quot;crimen.hxx&quot;</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;   <span class="comment">//Atributos</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ID;             <span class="comment">// Identificador del delito</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;   <span class="keywordtype">string</span> casenumber;       <span class="comment">// Código del caso</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;   <a class="code" href="classfecha.html">fecha</a> date;              <span class="comment">// Fecha en formato mm/dd/aaaa hh:mm:ss AM/PM</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;   <span class="keywordtype">string</span> iucr;             <span class="comment">// Código del tipo de delito según Illinois Uniform Crime Reporting, IUCR</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="keywordtype">string</span> description;       <span class="comment">// Descripción más detallada</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;   <span class="keywordtype">string</span> location_descrip;  <span class="comment">// Descripción del tipo de localización</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   <span class="keywordtype">bool</span> arrest;              <span class="comment">// Si hay arrestos o no</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   <span class="keywordtype">bool</span> domestic;            <span class="comment">// Si es un crimen domestico o no</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;   <span class="keywordtype">double</span> latitude;          <span class="comment">// Coordenada de latitud</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;   <span class="keywordtype">double</span> longitude;         <span class="comment">// Coordenada de longitud</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;};</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  ostream&amp; <a class="code" href="fecha_8h.html#a9787de38b43ae62ba2c0812f3dd18394">operator&lt;&lt; </a>( ostream&amp; , <span class="keyword">const</span> <a class="code" href="classcrimen.html">crimen</a>&amp; );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#include &quot;crimen.hxx&quot;</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classcrimen_html"><div class="ttname"><a href="classcrimen.html">crimen</a></div><div class="ttdoc">Clase crimen, asociada a la definición de un crimen. </div><div class="ttdef"><b>Definition:</b> crimen.h:16</div></div>
-<div class="ttc" id="classcrimen_html_ac308c139bb8b599a7badbecd91bfbc5a"><div class="ttname"><a href="classcrimen.html#ac308c139bb8b599a7badbecd91bfbc5a">crimen::setDate</a></div><div class="ttdeci">void setDate(const fecha &amp;d)</div><div class="ttdoc">Asigna una fecha. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:33</div></div>
-<div class="ttc" id="classcrimen_html_ab3c025eb20cdcea9192ee190fa2af015"><div class="ttname"><a href="classcrimen.html#ab3c025eb20cdcea9192ee190fa2af015">crimen::getCaseNumber</a></div><div class="ttdeci">string getCaseNumber() const </div><div class="ttdoc">Obtiene el numero de Caso. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:197</div></div>
-<div class="ttc" id="classcrimen_html_a2675734f5049f41b5fb5dbc4778df7f8"><div class="ttname"><a href="classcrimen.html#a2675734f5049f41b5fb5dbc4778df7f8">crimen::setID</a></div><div class="ttdeci">void setID(long int &amp;id)</div><div class="ttdoc">Asigna un ID. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:25</div></div>
-<div class="ttc" id="classcrimen_html_a9903f49178ad0001f39c03d018b05a2a"><div class="ttname"><a href="classcrimen.html#a9903f49178ad0001f39c03d018b05a2a">crimen::setIucr</a></div><div class="ttdeci">void setIucr(const string &amp;s)</div><div class="ttdoc">Asigna un código del tipo de delito según Illinois Uniform Crime Reporting, IUCR. ...</div><div class="ttdef"><b>Definition:</b> crimen.hxx:37</div></div>
-<div class="ttc" id="classcrimen_html_ae08b85470038469179a01ba753b7641a"><div class="ttname"><a href="classcrimen.html#ae08b85470038469179a01ba753b7641a">crimen::setArrest</a></div><div class="ttdeci">void setArrest(bool a)</div><div class="ttdoc">Asigna si esta arrestado // #fixme. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:53</div></div>
-<div class="ttc" id="classcrimen_html_a98ee8c42a0ec09c704c5f17e812a6bd5"><div class="ttname"><a href="classcrimen.html#a98ee8c42a0ec09c704c5f17e812a6bd5">crimen::setCaseNumber</a></div><div class="ttdeci">void setCaseNumber(const string &amp;s)</div><div class="ttdoc">Asigna un numero de caso. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:29</div></div>
+<div class="ttc" id="classcrimen_html_ac308c139bb8b599a7badbecd91bfbc5a"><div class="ttname"><a href="classcrimen.html#ac308c139bb8b599a7badbecd91bfbc5a">crimen::setDate</a></div><div class="ttdeci">void setDate(const fecha &amp;d)</div><div class="ttdoc">Asigna una fecha. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:32</div></div>
+<div class="ttc" id="classcrimen_html_ab3c025eb20cdcea9192ee190fa2af015"><div class="ttname"><a href="classcrimen.html#ab3c025eb20cdcea9192ee190fa2af015">crimen::getCaseNumber</a></div><div class="ttdeci">string getCaseNumber() const </div><div class="ttdoc">Obtiene el numero de Caso. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:190</div></div>
+<div class="ttc" id="classcrimen_html_abc39a10bdf42cbc38f51872cbf02c69d"><div class="ttname"><a href="classcrimen.html#abc39a10bdf42cbc38f51872cbf02c69d">crimen::getID</a></div><div class="ttdeci">unsigned int getID() const </div><div class="ttdoc">Obtiene el ID de un caso. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:186</div></div>
+<div class="ttc" id="classcrimen_html_a2675734f5049f41b5fb5dbc4778df7f8"><div class="ttname"><a href="classcrimen.html#a2675734f5049f41b5fb5dbc4778df7f8">crimen::setID</a></div><div class="ttdeci">void setID(long int &amp;id)</div><div class="ttdoc">Asigna un ID. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:24</div></div>
+<div class="ttc" id="classcrimen_html_a9903f49178ad0001f39c03d018b05a2a"><div class="ttname"><a href="classcrimen.html#a9903f49178ad0001f39c03d018b05a2a">crimen::setIucr</a></div><div class="ttdeci">void setIucr(const string &amp;s)</div><div class="ttdoc">Asigna un código del tipo de delito según Illinois Uniform Crime Reporting, IUCR. ...</div><div class="ttdef"><b>Definition:</b> crimen.hxx:36</div></div>
+<div class="ttc" id="classcrimen_html_ae08b85470038469179a01ba753b7641a"><div class="ttname"><a href="classcrimen.html#ae08b85470038469179a01ba753b7641a">crimen::setArrest</a></div><div class="ttdeci">void setArrest(bool a)</div><div class="ttdoc">Asigna si esta arrestado // #fixme. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:48</div></div>
+<div class="ttc" id="classcrimen_html_a98ee8c42a0ec09c704c5f17e812a6bd5"><div class="ttname"><a href="classcrimen.html#a98ee8c42a0ec09c704c5f17e812a6bd5">crimen::setCaseNumber</a></div><div class="ttdeci">void setCaseNumber(const string &amp;s)</div><div class="ttdoc">Asigna un numero de caso. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:28</div></div>
 <div class="ttc" id="classcrimen_html_ab1147e36869c7e635699e4ef746a7555"><div class="ttname"><a href="classcrimen.html#ab1147e36869c7e635699e4ef746a7555">crimen::crimen</a></div><div class="ttdeci">crimen()</div><div class="ttdoc">Constructor sin parametros. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:5</div></div>
-<div class="ttc" id="classcrimen_html_a3ec14cf4bb0464350d8efd98d2679d41"><div class="ttname"><a href="classcrimen.html#a3ec14cf4bb0464350d8efd98d2679d41">crimen::setDomestic</a></div><div class="ttdeci">void setDomestic(bool d)</div><div class="ttdoc">Asigna si es domestico. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:57</div></div>
+<div class="ttc" id="classcrimen_html_a3ec14cf4bb0464350d8efd98d2679d41"><div class="ttname"><a href="classcrimen.html#a3ec14cf4bb0464350d8efd98d2679d41">crimen::setDomestic</a></div><div class="ttdeci">void setDomestic(bool d)</div><div class="ttdoc">Asigna si es domestico. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:52</div></div>
 <div class="ttc" id="classfecha_html"><div class="ttname"><a href="classfecha.html">fecha</a></div><div class="ttdef"><b>Definition:</b> fecha.h:22</div></div>
-<div class="ttc" id="classcrimen_html_a24c7850a61d6435929450b7b10964f07"><div class="ttname"><a href="classcrimen.html#a24c7850a61d6435929450b7b10964f07">crimen::setCrimen</a></div><div class="ttdeci">void setCrimen(string &amp;cadena)</div><div class="ttdoc">Convierte una cadena en un crimen. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:68</div></div>
-<div class="ttc" id="classcrimen_html_a855eab30a304a6498828cb5d85a4e0e3"><div class="ttname"><a href="classcrimen.html#a855eab30a304a6498828cb5d85a4e0e3">crimen::getID</a></div><div class="ttdeci">long int getID() const </div><div class="ttdoc">Obtiene el ID de un caso. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:193</div></div>
-<div class="ttc" id="fecha_8h_html_a9787de38b43ae62ba2c0812f3dd18394"><div class="ttname"><a href="fecha_8h.html#a9787de38b43ae62ba2c0812f3dd18394">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const fecha &amp;f)</div><div class="ttdef"><b>Definition:</b> fecha.hxx:268</div></div>
-<div class="ttc" id="classcrimen_html_a612c4d3beaabd588703e4a580caf04e5"><div class="ttname"><a href="classcrimen.html#a612c4d3beaabd588703e4a580caf04e5">crimen::operator=</a></div><div class="ttdeci">crimen &amp; operator=(const crimen &amp;c)</div><div class="ttdoc">Operador de asignacion. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:237</div></div>
+<div class="ttc" id="classcrimen_html_a24c7850a61d6435929450b7b10964f07"><div class="ttname"><a href="classcrimen.html#a24c7850a61d6435929450b7b10964f07">crimen::setCrimen</a></div><div class="ttdeci">void setCrimen(string &amp;cadena)</div><div class="ttdoc">Convierte una cadena en un crimen. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:63</div></div>
+<div class="ttc" id="fecha_8h_html_a9787de38b43ae62ba2c0812f3dd18394"><div class="ttname"><a href="fecha_8h.html#a9787de38b43ae62ba2c0812f3dd18394">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const fecha &amp;f)</div><div class="ttdef"><b>Definition:</b> fecha.hxx:269</div></div>
+<div class="ttc" id="classcrimen_html_a612c4d3beaabd588703e4a580caf04e5"><div class="ttname"><a href="classcrimen.html#a612c4d3beaabd588703e4a580caf04e5">crimen::operator=</a></div><div class="ttdeci">crimen &amp; operator=(const crimen &amp;c)</div><div class="ttdoc">Operador de asignacion. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:226</div></div>
 <div class="ttc" id="fecha_8h_html"><div class="ttname"><a href="fecha_8h.html">fecha.h</a></div><div class="ttdoc">Fichero cabecera para fecha. </div></div>
-<div class="ttc" id="classcrimen_html_a8a6712e536211034819441ab87e1c215"><div class="ttname"><a href="classcrimen.html#a8a6712e536211034819441ab87e1c215">crimen::getDate</a></div><div class="ttdeci">fecha getDate() const </div><div class="ttdoc">Obtiene la fecha. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:201</div></div>
+<div class="ttc" id="classcrimen_html_a8a6712e536211034819441ab87e1c215"><div class="ttname"><a href="classcrimen.html#a8a6712e536211034819441ab87e1c215">crimen::getDate</a></div><div class="ttdeci">fecha getDate() const </div><div class="ttdoc">Obtiene la fecha. </div><div class="ttdef"><b>Definition:</b> crimen.hxx:194</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

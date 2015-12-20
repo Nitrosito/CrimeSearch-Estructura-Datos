@@ -102,7 +102,7 @@ NOTA IMPORTANTE</h1>
 <h1><a class="anchor" id="intro_sec"></a>
 Introducción</h1>
 <p>La ciudad de Chicago, en un intento de hacer un más flexible el acceso a los datos sobre delitos cometidos ha decidido replantearse un nuevo diseño del sistema de información que encargó a los alumnos en prácticas de la Universidad. Además de flexibilizar el acceso a los datos, otra de los requisitos que impone en el pliego de condiciones es que el acceso sea lo más eficiente posible. Este es un aspecto importante para el departamento ya que se esperan un alto número de consultas al sistema y este debe ser capaz de gestionarlas.</p>
-<p>Se debe diseñar un nuevo tipo de dato que llamaremos <a class="el" href="classCSS.html">CSS</a>, acrónimo de Crime Search System, que tiene que cumplir los siguientes requisitos:</p>
+<p>Se debe diseñar un nuevo tipo de dato que llamaremos CSS, acrónimo de Crime Search System, que tiene que cumplir los siguientes requisitos:</p>
 <ul>
 <li>Permitir un acceso eficiente a los delitos por ID.</li>
 </ul>
@@ -135,7 +135,7 @@ Introducción</h1>
 </ul>
 <h1><a class="anchor" id="TDA"></a>
 Tipo de dato CrimeSearch</h1>
-<p>La empresa de nueva creación EDGRX, ubicada en Granada, decide presentar su propuesta al departamento de policía. Para ello diseñan el tipo de dato <a class="el" href="classCSS.html">CSS</a> (CrimeSearchSystem),</p>
+<p>La empresa de nueva creación EDGRX, ubicada en Granada, decide presentar su propuesta al departamento de policía. Para ello diseñan el tipo de dato CSS (CrimeSearchSystem),</p>
 <h2><a class="anchor" id="publico"></a>
 Parte Pública</h2>
 <p>En la parte pública podemos distinguir tres tipos de datos:</p>
@@ -175,19 +175,19 @@ Parte Pública</h2>
 <ul>
 <li>void insert( const crimen &amp; x);</li>
 </ul>
-<p>Este método se encarga de insertar un nuevo crimen en <a class="el" href="classCSS.html">CSS</a>. Como prerrequisito se asume que el crimen no está ya almacenado en el conjunto. s </p><ul>
+<p>Este método se encarga de insertar un nuevo crimen en CSS. Como prerrequisito se asume que el crimen no está ya almacenado en el conjunto. s </p><ul>
 <li>bool erase( unsigned int ID);</li>
 </ul>
 <p>En este caso, se trata de borrar un crimen de la base de datos dado su ID. Devuelve verdadero si el crimen ha sido borrado correctamente, falso en caso contrario.</p>
-<p>No sólo borra el crimen del repositorio principal de datos en <a class="el" href="classCSS.html">CSS</a> sino que además se encarga de borrar toda referencia a dicho crimen dentro de él.</p>
+<p>No sólo borra el crimen del repositorio principal de datos en CSS sino que además se encarga de borrar toda referencia a dicho crimen dentro de él.</p>
 <ul>
 <li>iterator find (const unsigned int ID);</li>
 </ul>
-<p>Busca el crimen con identificador ID dentro de <a class="el" href="classCSS.html">CSS</a>, si no lo encuentra devuelve end()</p>
+<p>Busca el crimen con identificador ID dentro de CSS, si no lo encuentra devuelve end()</p>
 <ul>
 <li>void setArrest(const unsigned int ID, bool value);</li>
 </ul>
-<p>Modifica el campo arrest de un crimen identificado por ID. Será necesario cuando se detenga un criminal con posterioridad a la inserción del delito en <a class="el" href="classCSS.html">CSS</a>.</p>
+<p>Modifica el campo arrest de un crimen identificado por ID. Será necesario cuando se detenga un criminal con posterioridad a la inserción del delito en CSS.</p>
 <ul>
 <li>vector&lt;pair&lt;ID,float&gt; &gt; Query(list&lt;string&gt; &amp; q, int k); Dada una consulta, expresada mediante un conjunto de términos en q, el sistema devuelve un vector ordenado con los k mejores ID (aquellos con mayor peso, definido como el número de términos de q que están en la descripción del delito), con sus respectivos pesos.</li>
 </ul>
@@ -214,7 +214,7 @@ Parte Pública</h2>
 <li>Date_iterator dend(); </li>
 <li>iterator end();</li>
 </ul>
-<p>Devuelve el iterador que apunta al elemento siguiente al último delito en <a class="el" href="classCSS.html">CSS</a> según el criterio sobre el que se está itera.</p>
+<p>Devuelve el iterador que apunta al elemento siguiente al último delito en CSS según el criterio sobre el que se está itera.</p>
 <h2><a class="anchor" id="privado"></a>
 Parte privada</h2>
 <p>En este caso hablaremos de los atributos que se han escogido para representar la información.</p>
@@ -224,7 +224,7 @@ Parte privada</h2>
 <div class="line"><span class="keyword">typedef</span> <span class="keywordtype">string</span> Termino;</div>
 <div class="line"><span class="keyword">typedef</span> <span class="keywordtype">string</span> IUCR;</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">class </span><a class="code" href="classCSS.html">CSS</a>{</div>
+<div class="line"><span class="keyword">class </span>CSS{</div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">    map&lt;ID,Crimen&gt; baseDatos; </div>
 <div class="line"></div>
@@ -265,8 +265,8 @@ Parte privada</h2>
 <p>Esta estructura se actualiza cada vez que se inserta o borra un nuevo delito.</p>
 <h1><a class="anchor" id="iterando"></a>
 Iterando sobre CSS</h1>
-<p>Se han definido distintos criterios para poder iterar sobre un <a class="el" href="classCSS.html">CSS</a>. Como se ha visto, para cada criterio guardamos una estructura que de forma eficiente me permite avanzar por los delitos siguiendo el orden establecido.</p>
-<p>Pasamos a ver cuál sería la representación interna que se propone para cada uno de ellos. </p><div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="classCSS.html">CSS</a> {</div>
+<p>Se han definido distintos criterios para poder iterar sobre un CSS. Como se ha visto, para cada criterio guardamos una estructura que de forma eficiente me permite avanzar por los delitos siguiendo el orden establecido.</p>
+<p>Pasamos a ver cuál sería la representación interna que se propone para cada uno de ellos. </p><div class="fragment"><div class="line"><span class="keyword">class </span>CSS {</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line"></div>
 <div class="line"></div>
@@ -300,13 +300,13 @@ Iterando sobre CSS</h1>
 <div class="line">     };</div>
 </div><!-- fragment --><h2><a class="anchor" id="métodosIt"></a>
 Algunos Métodos sobre iteradores</h2>
-<p>En general los métodos sobre iteradores son sencillos de implementar, sólo hay que envolver los iteradores primitivos (sobre map o multimap) con el paraguas de la clase <a class="el" href="classCSS.html">CSS</a>. Sin embargo, hay algunas distinciones que se deberían hacer a la hora de abordar su implementación.</p>
+<p>En general los métodos sobre iteradores son sencillos de implementar, sólo hay que envolver los iteradores primitivos (sobre map o multimap) con el paraguas de la clase CSS. Sin embargo, hay algunas distinciones que se deberían hacer a la hora de abordar su implementación.</p>
 <ul>
 <li>Operador de derefernciación, operator*().</li>
 </ul>
 <p>En este caso, el valor devuelto por el operador * de todos los iteradores es pair&lt;const ID,Crimen&gt; &amp;</p>
 <div class="fragment"><div class="line">pair&lt;const ID, Crimen &gt; &amp;  operator*();   </div>
-</div><!-- fragment --><p>Notar el const ID, dentro del primer campo del pair. Esto se hace para evitar que se pueda modificar dicha clave desde fuera de <a class="el" href="classCSS.html">CSS</a>. Los valores de la definición si se pueden modificar. Asumimos que el usuario no modificará el ID de la definición del crimen, para no permitir que un crimen tuviese distintos valores de ID en la clave y en la definición. Lo ideal sería que no estuviese el ID dentro del crimen.</p>
+</div><!-- fragment --><p>Notar el const ID, dentro del primer campo del pair. Esto se hace para evitar que se pueda modificar dicha clave desde fuera de CSS. Los valores de la definición si se pueden modificar. Asumimos que el usuario no modificará el ID de la definición del crimen, para no permitir que un crimen tuviese distintos valores de ID en la clave y en la definición. Lo ideal sería que no estuviese el ID dentro del crimen.</p>
 <p>El el caso del iterator, y también Date_iterator su implementación es simple, sólo tenemos que devolver el pair que se accede directamente de it o bien accediendo al elemento que esta en la posición second del it_mm</p>
 <p>Sin embargo, para el IUCR iterator que internamente tiene dos atributos: el primero que itera sobre el map y el segundo que itera sobre el set. Este segundo atributo es que realmente hace referencia al ID del delito concreto al que apunta el iterador. Por tanto, para obtener el pair que debemos devolver sólo debemos de coger el ID apuntado por it_s, esto es, *it_s y buscar el crimen con ese ID en el map, por ejemplo haciendo baseDatos.find(*it_s)</p>
 <ul>
@@ -316,11 +316,11 @@ Algunos Métodos sobre iteradores</h2>
 <h1><a class="anchor" id="consulta"></a>
 Consulta Libre</h1>
 <p>Veamos cómo implementar el siguiente método de forma eficiente </p><div class="fragment"><div class="line">vector&lt;pair&lt;ID,float&gt; &gt; Query(list&lt;string&gt; &amp; q, <span class="keywordtype">int</span> k);   </div>
-</div><!-- fragment --><p>Para ello utilizaremos la estructura index que está en el <a class="el" href="classCSS.html">CSS</a>. Esta estructura es un unorderd_map, que para cada término tiene el conjunto de ID para los que dicho término forma parte de la descripción. </p><div class="fragment"><div class="line">unordered_map&lt;Termino, set&lt;ID&gt; &gt; index;</div>
+</div><!-- fragment --><p>Para ello utilizaremos la estructura index que está en el CSS. Esta estructura es un unorderd_map, que para cada término tiene el conjunto de ID para los que dicho término forma parte de la descripción. </p><div class="fragment"><div class="line">unordered_map&lt;Termino, set&lt;ID&gt; &gt; index;</div>
 </div><!-- fragment --><p>Así podemos distinguir tres casos:</p>
 <ul>
 <li>1) Si la lista tiene un único termino, buscamos el término en el index y devolvemos una lista con todos los ID del conjunto asocidado, con el valor second del par a 1.0; </li>
-<li>2) Si la lista tiene dos términos, debemos hacer una unión de las dos listas de IDs asociadas a los términos, pero en el caso en que exista un ID que esté en ambos conjuntos (los dos términos están en la descripción del ID), debemos contar su peso como 2, en caso contrario como los IDs pertenecen sólo a una lista y por tanto su peso será 1. En este proceso se puede aprovechar que los conjuntos están ordenados en orden creciente de ID. Para ello, podemos diseñar un método privado de la clase <a class="el" href="classCSS.html">CSS</a> con el siguiente prototipo</li>
+<li>2) Si la lista tiene dos términos, debemos hacer una unión de las dos listas de IDs asociadas a los términos, pero en el caso en que exista un ID que esté en ambos conjuntos (los dos términos están en la descripción del ID), debemos contar su peso como 2, en caso contrario como los IDs pertenecen sólo a una lista y por tanto su peso será 1. En este proceso se puede aprovechar que los conjuntos están ordenados en orden creciente de ID. Para ello, podemos diseñar un método privado de la clase CSS con el siguiente prototipo</li>
 </ul>
 <div class="fragment"><div class="line">map&lt;ID,float&gt; unionPeso( <span class="keyword">const</span> set&lt;ID&gt; &amp; t1, <span class="keyword">const</span> set&lt;ID&gt; &amp;t2); </div>
 </div><!-- fragment --><ul>
