@@ -151,6 +151,26 @@ bool css::erase( unsigned int ID){
   baseDatos.erase(ID);
 }
 
+list<ID> css::inArea(Longitud x1, Latitud y1, Longitud x2, Latitud y2){
+  list<ID> res;
+  map<Longitud,multimap<Latitud,ID>>::iterator it;
+  multimap<Latitud,ID>::iterator ot;
+  it = posicionGeo.lower_bound(x1);
+  if(it!=posicionGeo.end()){
+      ot =(*it).second.lower_bound(y1);
+      if(ot!=(*it).second.end()){
+
+        for(;(*it).first <= x2 && it!=posicionGeo.end() ;it++){
+          ot =(*it).second.lower_bound(y1);
+          for(;(*ot).first <= y2 && ot!=(*it).second.end();ot++){
+              res.push_back((*ot).second);
+          }
+        }
+    }
+  }
+  return res;
+}
+
 void css::mostrarTamanios(){
   cout << "Tamaño baseDatos: " << baseDatos.size() << endl;
   cout << "Tamaño DateAccess: " << DateAccess.size() << endl;

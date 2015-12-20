@@ -31,8 +31,8 @@ int main(){
     }
     cout << "-------------------------" << endl;
 
-    cout << "\n------find_ID----10231612-------" << endl;
-    css::iterator buscar = database.find_ID(10231612);
+    cout << "\n------find_ID----10230953-------" << endl;
+    css::iterator buscar = database.find_ID(10230953);
     if(buscar!=database.end()){
       cout << "ECONTRADO " << (*buscar).second << endl;
     }
@@ -87,6 +87,15 @@ int main(){
     }
     else
       cout << "No se ha podido borrar" << endl;
+
+
+    cout << "\n\n -----inArea-- (-88,40.748) --( -80.7617, 50.7617) " <<  endl;
+      list<ID> area;
+      area = database.inArea(-88,40.748,89.7617,50.7617);
+
+      for(auto it=begin(area); it!=end(area);it++)
+        cout << "--> Crimen con ID: " << (*it) << endl;
+
 
 
 
