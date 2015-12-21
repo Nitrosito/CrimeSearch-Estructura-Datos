@@ -217,6 +217,14 @@ multimap<fecha, map<ID,crimen>::iterator> DateAccess;
 map<IUCR,set<ID> > IUCRAccess;
 unordered_map<Termino, set<ID> > index;
 map<Longitud,multimap<Latitud, ID> > posicionGeo;
+
+/**
+ * @brief Union de IDs que se repiten en 2 listas
+ * @param t1,t2 listas
+ * @return par con los IDs y el "numero" de veces que se repiten
+ */
+map<ID,float> unionPeso( const set<ID> & t1, const set<ID> &t2);
+
 };
 
 #include "css.hxx"

@@ -281,8 +281,52 @@ vector<pair<ID,float> > css::Query(list<string> & q, int k){
       }
       return res;
   }
-  
+
+  if(q.size()==2){
+      unordered_map<Termino,set<ID>>::iterator primero;
+      vector<pair<ID,float>> res;
+      pair<ID,float> inres;
+
+      primero=index.find((*q.begin()));
+      set<ID>::iterator primerid;
+      primerid = (*primero).second.begin();
+
+      for(;primerid != (*primero).second.end(); primerid++){
+        inres.first=(*primerid);
+        inres.second=1.0;
+        res.push_back(inres);
+      }
+      return res;
+  }
+
 }
+
+map<ID,float> css::unionPeso( const set<ID> & t1, const set<ID> &t2){
+  map<ID,float> res;
+  pair<ID,float> inres;
+
+  set<ID>::iterator sit;
+  sit=t1.begin();
+  for(;sit!=t1.end();sit++){
+    inres.first=(*sit);
+    inres.second=1;
+    res.insert(inres);
+  }
+
+  sit=t2.begin();
+  for(;sit != t2.end();sit++){
+    if( res.find((*sit)) != res.end())
+      res[(*sit)]++;
+
+    else{
+      inres.first=(*sit);
+      inres.second=1;
+      res.insert(inres);
+    }
+  }
+  return res;
+}
+
 
 
 
