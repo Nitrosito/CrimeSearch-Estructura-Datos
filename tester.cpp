@@ -86,11 +86,20 @@ int main(){
       for(auto it=begin(area); it!=end(area);it++)
         cout << "--> Crimen con ID: " << (*it) << endl;
 
-    cout << "\n\n -----Query-- DOMESTIC,1" <<  endl;
+    cout << "\n\n -----Query-- DOMESTIC" <<  endl;
     vector<pair<ID,float>> resultado;
     list<string> p1;
     p1.push_back("DOMESTIC");
     resultado = database.Query(p1,1);
+    for(auto it=resultado.begin();it!=resultado.end();it++){
+      cout << "ID " <<  (*it).first << " " << (*it).second << endl;
+    }
+
+    cout << "\n\n -----Query-- DOMESTIC,AGGRAVATED" <<  endl;
+    list<string> p2;
+    p2.push_back("DOMESTIC");
+    p2.push_back("AGGRAVATED");
+    resultado = database.Query(p2,1);
     for(auto it=resultado.begin();it!=resultado.end();it++){
       cout << "ID " <<  (*it).first << " " << (*it).second << endl;
     }

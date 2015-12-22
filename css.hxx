@@ -282,19 +282,38 @@ vector<pair<ID,float> > css::Query(list<string> & q, int k){
       return res;
   }
 
+
   if(q.size()==2){
       unordered_map<Termino,set<ID>>::iterator primero;
-      vector<pair<ID,float>> res;
-      pair<ID,float> inres;
-
+      set<ID> temporal1;
+      set<ID> temporal2;
       primero=index.find((*q.begin()));
       set<ID>::iterator primerid;
       primerid = (*primero).second.begin();
 
+      //lista de ID 1
       for(;primerid != (*primero).second.end(); primerid++){
-        inres.first=(*primerid);
-        inres.second=1.0;
-        res.push_back(inres);
+        temporal1.insert(*primerid);
+      }
+
+      //Lista de ID 2
+      list<string>::iterator it_l;
+      it_l=q.begin();
+      it_l++;
+      primero=index.find((*it_l));
+      if(primero!=index.end()){
+          primerid = (*primero).second.begin();
+          for(;primerid != (*primero).second.end(); primerid++){
+            temporal2.insert(*primerid);
+          }
+
+          map<ID,float> up;
+          up = unionPeso(temporal1,temporal2);
+          for(auto it=up.begin(); it!=up.end();it++){
+            inres.first=(*it).first;
+            inres.second=(*it).second;
+            res.push_back(inres);
+          }
       }
       return res;
   }
